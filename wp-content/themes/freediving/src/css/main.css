@@ -843,6 +843,10 @@ body {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-\[39\/53\] {
+  aspect-ratio: 39/53;
+}
+
 .h-20 {
   height: 5rem;
 }
@@ -2614,6 +2618,10 @@ main::before {
 
   .lg\:aspect-\[66\/62\] {
     aspect-ratio: 66/62;
+  }
+
+  .lg\:aspect-\[103\/39\] {
+    aspect-ratio: 103/39;
   }
 
   .lg\:h-36 {

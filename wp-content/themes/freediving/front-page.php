@@ -31,24 +31,30 @@ get_header(); ?>
 
     <section class="aboutbl mb-32 bg-no-repeat max-lg:bg-200 lg:bg-center lg:bg-contain" style="background-image: url('./img/about-bg.png');">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
-        <h2 class="text-6xl text-white font-medium text-center text-opacity-5 uppercase mb-8 lg:hidden">About us</h2>
+        <h2 class="text-6xl text-white font-medium text-center text-opacity-5 uppercase mb-8 lg:hidden"><?php the_field('aboutbl_title'); ?></h2>
         <div class="flex items-end flex-wrap gap-y-32 -mx-3 sm:-mx-6 lg:gap-x-10 xl:gap-x-14 lg:flex-nowrap lg:-mx-0 2xl:gap-x-24">
           <div class="about-card relative w-fullMobile sm:w-fullTablet lg:basis-2/5">
-            <div class="max-lg:absolute max-sm:left-3 max-sm:right-3 max-lg:p-8 max-lg:left-6 max-lg:right-6 max-lg:-bottom-10 max-lg:border-white max-lg:border max-lg:border-opacity-20 max-lg:backdrop-blur-lg max-lg:bg-card max-lg:text-center text-lg leading-6 text-white lg:text-xl lg:leading-8 lg:mb-14">
-              <p>Welcome to our freediving school! We offer training and practice in the art of breath-hold diving with experienced
-              instructors. Our mission is to help students unlock their potential and master the art of depth diving without scuba
-              gear</p>
+            <div class="max-lg:absolute max-sm:left-3 max-sm:right-3 max-lg:p-8 max-lg:left-6 max-lg:right-6 max-lg:-bottom-10 max-lg:border-white max-lg:border max-lg:border-opacity-20 max-lg:backdrop-blur-lg max-lg:bg-card max-lg:text-center text-lg leading-6 text-white lg:text-xl lg:leading-8 lg:mb-7">
+              <?php the_field('aboutbl_text_left'); ?>
             </div>
-            <img src="img/about-img-01.jpg" class="w-full max-sm:aspect-[39/53] sm:aspect-square object-cover lg:aspect-[66/64]" alt="">
+            <?php $aboutbl_img_left = get_field('aboutbl_img_left');
+            if ($aboutbl_img_left) : ?>
+              <img src="<?php echo esc_url($aboutbl_img_left['url']); ?>" 
+                class="w-full max-sm:aspect-[39/53] sm:aspect-square object-cover lg:aspect-[66/62]"
+                alt="<?php echo esc_attr($aboutbl_img_left['alt']); ?>">
+            <?php endif; ?>
           </div>
           <div class="about-card relative w-fullMobile sm:w-fullTablet lg:basis-3/5">
-            <h2 class="hidden text-white font-medium uppercase mb-8 lg:text-7xl lg:text-opacity-15 lg:block xl:text-9xl 2xl:text-[10rem]">About us</h2>
+            <h2 class="hidden text-white font-medium uppercase mb-8 lg:text-7xl lg:text-opacity-15 lg:block xl:text-9xl 2xl:text-[10rem]"><?php the_field('aboutbl_title'); ?></h2>
             <div class="max-lg:absolute max-sm:left-3 max-sm:right-3 max-lg:left-6 max-lg:right-6 max-lg:top-1/2 max-lg:-translate-y-1/2 max-lg:text-center text-lg leading-6 text-white lg:text-xl lg:leading-8 lg:mb-14">
-              <p>Our team consists of highly qualified instructors with expertise in freediving. They will accompany you throughout your learning journey, creating a safe and inspiring environment. Our approach encompasses theory, practice, and personal support to develop your skills and reach new depths
-              inspiring environment. Our approach encompasses theory, practice, and personal support to develop your skills and reach
-              new depths</p>
+              <?php the_field('aboutbl_text_right'); ?>
             </div>
-            <img src="img/about-img-02.jpg" class="w-full max-sm:aspect-[39/53] sm:aspect-square object-cover lg:aspect-[103/39]" alt="">
+            <?php $aboutbl_img_right = get_field('aboutbl_img_right');
+            if ($aboutbl_img_right) : ?>
+              <img src="<?php echo esc_url($aboutbl_img_right['url']); ?>" 
+                class="w-full max-sm:aspect-[39/53] sm:aspect-square object-cover lg:aspect-[103/50]" 
+                alt="<?php echo esc_attr($aboutbl_img_right['alt']); ?>">
+            <?php endif; ?>
           </div>
         </div>
       </div>
