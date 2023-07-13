@@ -2693,6 +2693,10 @@ main::before {
     max-width: 36rem;
   }
 
+  .lg\:max-w-4xl {
+    max-width: 56rem;
+  }
+
   .lg\:basis-2\/5 {
     flex-basis: 40%;
   }

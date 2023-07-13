@@ -3,7 +3,7 @@
 Template Name: Home
 */
 get_header(); ?>
-
+    <!-- Готово -->
     <section class="hero relative z-0 pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
@@ -28,8 +28,8 @@ get_header(); ?>
         <img src="<?php the_field('hero_mob_bg'); ?>" class="w-full h-full object-cover" alt="">
       </div>
     </section>
-
-    <section class="aboutbl mb-32 bg-no-repeat max-lg:bg-200 lg:bg-center lg:bg-contain" style="background-image: url('./img/about-bg.png');">
+    <!-- Готово -->
+    <section class="aboutbl mb-32 bg-no-repeat max-lg:bg-200 lg:bg-center lg:bg-contain" style="background-image: url(<?php the_field('aboutbl_bg'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <h2 class="text-6xl text-white font-medium text-center text-opacity-5 uppercase mb-8 lg:hidden"><?php the_field('aboutbl_title'); ?></h2>
         <div class="flex items-end flex-wrap gap-y-32 -mx-3 sm:-mx-6 lg:gap-x-10 xl:gap-x-14 lg:flex-nowrap lg:-mx-0 2xl:gap-x-24">
@@ -46,7 +46,7 @@ get_header(); ?>
           </div>
           <div class="about-card relative w-fullMobile sm:w-fullTablet lg:basis-3/5">
             <h2 class="hidden text-white font-medium uppercase mb-8 lg:text-7xl lg:text-opacity-15 lg:block xl:text-9xl 2xl:text-[10rem]"><?php the_field('aboutbl_title'); ?></h2>
-            <div class="max-lg:absolute max-sm:left-3 max-sm:right-3 max-lg:left-6 max-lg:right-6 max-lg:top-1/2 max-lg:-translate-y-1/2 max-lg:text-center text-lg leading-6 text-white lg:text-xl lg:leading-8 lg:mb-14">
+            <div class="max-lg:absolute max-sm:left-3 max-sm:right-3 max-lg:left-6 max-lg:right-6 max-lg:top-1/2 max-lg:-translate-y-1/2 max-lg:text-center text-lg leading-6 text-white lg:text-xl lg:leading-8 lg:mb-14 lg:max-w-4xl">
               <?php the_field('aboutbl_text_right'); ?>
             </div>
             <?php $aboutbl_img_right = get_field('aboutbl_img_right');
@@ -60,17 +60,13 @@ get_header(); ?>
       </div>
     </section>
 
-    <section class="z-0 about-diving relative pt-4 pb-20 mb-32 bg-no-repeat bg-center bg-cover max-lg:mt-64 lg:py-20 2xl:py-32" style="background-image: url('./img/about-diving-bg.jpg');">
+    <section class="z-0 about-diving relative pt-4 pb-20 mb-32 bg-no-repeat bg-center bg-cover max-lg:mt-64 lg:py-20 2xl:py-32" style="background-image: url('<?php the_field('about_diving_bg'); ?>');">
       <div class="z-10 relative mx-auto container px-3 sm:px-6 lg:px-16">
-        <img src="img/about-diving-decor.png" class="absolute w-32 h-32 md:w-42 md:h-42 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:-top-48 lg:right-16 lg:bottom-0 xl:w-52 xl:h-52" alt="">
+        <img src="<?php the_field('about_diving_decor'); ?>" class="absolute w-32 h-32 md:w-42 md:h-42 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:-top-48 lg:right-16 lg:bottom-0 xl:w-52 xl:h-52" alt="">
         <div class="py-8 px-6 border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:w-8/12 2xl:w-5/12">
-          <h2 class="text-2xl text-white font-medium max-lg:text-center mb-8 lg:mb-10">About free diving</h2>
+          <h2 class="text-2xl text-white font-medium max-lg:text-center mb-8 lg:mb-10"><?php the_field('about_diving_title'); ?></h2>
           <div class="grid gap-y-7 max-lg:text-center text-lg leading-6 text-white text-opacity-60 lg:text-xl lg:leading-8">
-            <p>Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring the underwater world without any limitations.</p>
-            <p>Freediving is not just a sport; it is a way to find harmony with oneself and the surrounding environment. It enables us
-            to become aware of and control our breath, relieve stress, and truly embrace the present moment underwater. Each dive
-            becomes a unique experience, revealing the incredible beauty of marine life and underwater landscapes.</p>
-            <p>Freediving is an exciting and inspiring adventure that grants you freedom and a deep connection with nature. Regardless of your skill level, freediving opens the doors to the mesmerizing world of underwater wonders. Join us and immerse yourself in the captivating world of freediving!</p>
+            <?php the_field('about_diving_text'); ?>
           </div>
         </div>
       </div>

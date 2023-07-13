@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  
+  /**
+   * Инициализация плагина AOS
+   */
   AOS.init();
 
   /**
@@ -62,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
 
-  /*=============== SWIPER ===============*/
   /**
    * Слайдер на главной странице
    */
