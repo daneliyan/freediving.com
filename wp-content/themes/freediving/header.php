@@ -12,15 +12,18 @@
       <nav class="relative z-50 flex justify-between border-0 border-b-white pt-7 pb-6 lg:border-b lg:pt-14 lg:pb-12">
         <div class="flex items-center w-full md:gap-x-14">
           <?php if( $logo = get_custom_logo() ){ echo $logo; } ?>
-          <div class="hidden gap-x-8 lg:flex xl:gap-x-14">
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="index.html">Home</a>
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="about-us.html">About us</a>
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="trips.html">Trips</a>
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="courses.html">Courses</a>
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="faq.html">FAQ</a>
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="reviews.html">Reviews</a>
-            <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="place.html">Place</a>
-          </div>
+
+          <?php
+            wp_nav_menu( [
+              'theme_location'  => 'header',
+              'container'       => '',
+              'menu_class'      => 'hidden gap-x-8 lg:flex xl:gap-x-14',
+              'menu_id'         => false,
+              'echo'            => true,
+              'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            ] );
+          ?>
+
           <div class="flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7">
             <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
               <i class="icomoon icon-telegram"></i>
@@ -61,15 +64,17 @@
                 <i class="icomoon icon-twitter"></i>
               </a>
             </div>
-            <div class="flex flex-col gap-y-7">
-              <a class="inline-block text-xl text-white hover:opacity-80" href="index.html">Home</a>
-              <a class="inline-block text-xl text-white hover:opacity-80" href="about-us.html">About us</a>
-              <a class="inline-block text-xl text-white hover:opacity-80" href="trips.html">Trips</a>
-              <a class="inline-block text-xl text-white hover:opacity-80" href="courses.html">Courses</a>
-              <a class="inline-block text-xl text-white hover:opacity-80" href="faq.html">FAQ</a>
-              <a class="inline-block text-xl text-white hover:opacity-80" href="reviews.html">Reviews</a>
-              <a class="inline-block text-xl text-white hover:opacity-80" href="place.html">Place</a>
-            </div>
+
+            <?php
+              wp_nav_menu( [
+                'theme_location'  => 'header',
+                'container'       => '',
+                'menu_class'      => 'mob-menu flex flex-col gap-y-7',
+                'menu_id'         => false,
+                'echo'            => true,
+                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              ] );
+            ?>
           </div>
         </div>
       </nav>

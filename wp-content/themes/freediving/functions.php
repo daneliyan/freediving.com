@@ -21,6 +21,7 @@ if (! function_exists('freediving_setup')) {
 	add_action( 'after_setup_theme', 'freediving_setup' );
 }
 
+
 /**
  * Подключение стилей и скриптов
  */
@@ -38,8 +39,28 @@ function freediving_scripts() {
   // SCRIPTS
   wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.min.js', array(), null, true);
   wp_enqueue_script('fancybox', get_template_directory_uri() . '/src/js/fancybox.min.js', array(), null, true);
-  wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js');
+  wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js', array('swiper', 'fancybox'), null, true);
 }
 add_action('wp_enqueue_scripts', 'freediving_scripts');
+
+
+/**
+ * Регистрация областей меню
+ */
+function freediving_menus() {
+  $locations = array(
+    'header' => __('Header Menu', 'freediving'),
+  );
+  register_nav_menus($locations);
+}
+add_action('init', 'freediving_menus');
+
+// повесим на все ссылки класс nav-link
+add_filter( 'nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10);
+function custom_nav_menu_link_attributes($atts) {
+	$atts['class'] = 'inline-block text-base text-white hover:opacity-80 xl:text-xl';
+	return $atts;
+}
+
 
 ?>

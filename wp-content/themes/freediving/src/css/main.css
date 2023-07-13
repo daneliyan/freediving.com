@@ -1703,6 +1703,11 @@ main::before {
   box-shadow: -30px 4px 40px rgba(10, 26, 42, 0.25);
 }
 
+.mob-menu li a {
+  font-size: 1.25rem/* 20px */;
+  line-height: 1.75rem/* 28px */;
+}
+
 /* затемнение в блоке about diving */
 
 .about-diving::before,
