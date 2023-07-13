@@ -50,13 +50,11 @@ add_action('wp_enqueue_scripts', 'freediving_scripts');
 function freediving_menus() {
   $locations = array(
     'header' => __('Header Menu', 'freediving'),
-    // 'header_socials' => __('Header Socials', 'freediving'),
   );
   register_nav_menus($locations);
 }
 add_action('init', 'freediving_menus');
-
-// классы tailwind для меню
+// классы tailwind для пунктов меню
 add_filter( 'nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10);
 function custom_nav_menu_link_attributes($atts) {
 	$atts['class'] = 'inline-block text-base text-white hover:opacity-80 xl:text-xl';
@@ -70,7 +68,7 @@ function custom_nav_menu_link_attributes($atts) {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> 'General Settings',
+		'page_title' 	=> 'Theme Settings',
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',

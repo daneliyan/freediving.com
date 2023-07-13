@@ -22,59 +22,46 @@
               'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             ] );
           ?>
-
           <?php
-            wp_nav_menu( [
-              'theme_location'  => 'header_socials',
-              'container'       => '',
-              'menu_class'      => 'flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7',
-              'menu_id'         => false,
-              'echo'            => true,
-              'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            ] );
+            if( have_rows('header_socials', 'option') ): ?>
+              <div class="flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7">
+                <?php while( have_rows('header_socials', 'option') ) : the_row();
+                $link = get_sub_field('link', 'option');
+                if( $link ): 
+                    $link_url = $link['url'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';?>
+                    <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                      <?php the_sub_field('icon', 'option'); ?>
+                    </a>
+                <?php endif;
+                endwhile; ?>
+              </div>
+            <?php else :
+            endif;
           ?>
-
-          <!-- <div class="flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7">
-            <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
-              <i class="icomoon icon-telegram"></i>
-            </a>
-            <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
-              <i class="icomoon icon-whatsapp"></i>
-            </a>
-            <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
-              <i class="icomoon icon-instagram"></i>
-            </a>
-            <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
-              <i class="icomoon icon-facebook"></i>
-            </a>
-            <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
-              <i class="icomoon icon-twitter"></i>
-            </a> -->
-          </div>
         </div>
         <div class="flex items-center lg:hidden">
           <button class="z-10 flex items-center justify-center" aria-label="Toggle Navigation" type="button" id="nav-toggle">
             <i class="icomoon icon-menu text-2xl leading-none text-white"></i>
           </button>
           <div class="nav-menu" id="nav-menu">
-            <div class="flex items-center ml-auto gap-x-4 mb-8 lg:gap-x-7">
-              <a class="inline-block text-lg leading-none text-white hover:text-accent" href="#" target="_blank">
-                <i class="icomoon icon-telegram"></i>
-              </a>
-              <a class="inline-block text-lg leading-none text-white hover:text-accent" href="#" target="_blank">
-                <i class="icomoon icon-whatsapp"></i>
-              </a>
-              <a class="inline-block text-lg leading-none text-white hover:text-accent" href="#" target="_blank">
-                <i class="icomoon icon-instagram"></i>
-              </a>
-              <a class="inline-block text-lg leading-none text-white hover:text-accent" href="#" target="_blank">
-                <i class="icomoon icon-facebook"></i>
-              </a>
-              <a class="inline-block text-lg leading-none text-white hover:text-accent" href="#" target="_blank">
-                <i class="icomoon icon-twitter"></i>
-              </a>
-            </div>
-
+            <?php
+              if( have_rows('header_socials', 'option') ): ?>
+                <div class="flex items-center ml-auto gap-x-4 mb-8 lg:gap-x-7">
+                  <?php while( have_rows('header_socials', 'option') ) : the_row();
+                  $link = get_sub_field('link', 'option');
+                  if( $link ): 
+                      $link_url = $link['url'];
+                      $link_target = $link['target'] ? $link['target'] : '_self';?>
+                      <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <?php the_sub_field('icon', 'option'); ?>
+                      </a>
+                  <?php endif;
+                  endwhile; ?>
+                </div>
+              <?php else :
+              endif;
+            ?>
             <?php
               wp_nav_menu( [
                 'theme_location'  => 'header',
