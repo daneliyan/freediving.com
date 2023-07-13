@@ -7,22 +7,26 @@ get_header(); ?>
     <section class="hero relative z-0 pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
-          <h1 class="text-white uppercase font-medium max-w-[1440px] text-3xl leading-9 mb-7 max-lg:mb-64 max-lg:text-center md:text-6xl md:leading-[66px] 2xl:text-8xl 2xl:leading-[100px]">Discover the hidden wonders underwater</h1>
-          <p class="max-lg:text-center text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8 lg:mb-14">Explore the underwater world and master freediving with our freediving school. Gain unforgettable experience and breath control under the guidance of experienced instructors</p>
+          <h1 class="text-white uppercase font-medium max-w-[1440px] text-3xl leading-9 mb-7 max-lg:mb-64 max-lg:text-center md:text-6xl md:leading-[66px] 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('hero_title'); ?></h1>
+          <div class="max-lg:text-center text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8 lg:mb-14"><?php the_field('hero_text'); ?></div>
         </div>
       </div>
       <div class="swiper-nav relative flex items-center justify-center max-lg:hidden lg:ml-auto lg:absolute lg:right-16 lg:bottom-12">
         <div class="swiper-pagination relative bottom-auto z-10"></div>
       </div>
       <!-- Swiper -->
+      <?php if( have_rows('hero_slider') ): ?>
       <div class="swiper heroSwiper absolute left-0 top-0 w-full h-full z-[-2] max-lg:hidden">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
+          <?php while( have_rows('hero_slider') ) : the_row(); ?>
+              <div class="swiper-slide"><img src="<?php the_sub_field('img'); ?>" alt=""></div>
+          <?php endwhile; ?>
         </div>
       </div>
-      <div class="bg-image absolute left-0 top-0 w-full h-full object-cover z-[-2] lg:hidden"><img src="./img/hero-slider-img.jpg" class="w-full h-full object-cover" alt=""></div>
+      <?php else : endif; ?>
+      <div class="bg-image absolute left-0 top-0 w-full h-full object-cover z-[-2] lg:hidden">
+        <img src="<?php the_field('hero_mob_bg'); ?>" class="w-full h-full object-cover" alt="">
+      </div>
     </section>
 
     <section class="aboutbl mb-32 bg-no-repeat max-lg:bg-200 lg:bg-center lg:bg-contain" style="background-image: url('./img/about-bg.png');">
