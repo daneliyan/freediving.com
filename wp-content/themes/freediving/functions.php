@@ -50,16 +50,45 @@ add_action('wp_enqueue_scripts', 'freediving_scripts');
 function freediving_menus() {
   $locations = array(
     'header' => __('Header Menu', 'freediving'),
+    // 'header_socials' => __('Header Socials', 'freediving'),
   );
   register_nav_menus($locations);
 }
 add_action('init', 'freediving_menus');
 
-// повесим на все ссылки класс nav-link
+// классы tailwind для меню
 add_filter( 'nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10);
 function custom_nav_menu_link_attributes($atts) {
 	$atts['class'] = 'inline-block text-base text-white hover:opacity-80 xl:text-xl';
 	return $atts;
+}
+
+
+/**
+ * Создание Options Page и Options Sub Page на основе ACF Pro
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
 }
 
 

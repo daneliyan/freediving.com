@@ -12,7 +12,6 @@
       <nav class="relative z-50 flex justify-between border-0 border-b-white pt-7 pb-6 lg:border-b lg:pt-14 lg:pb-12">
         <div class="flex items-center w-full md:gap-x-14">
           <?php if( $logo = get_custom_logo() ){ echo $logo; } ?>
-
           <?php
             wp_nav_menu( [
               'theme_location'  => 'header',
@@ -24,7 +23,18 @@
             ] );
           ?>
 
-          <div class="flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7">
+          <?php
+            wp_nav_menu( [
+              'theme_location'  => 'header_socials',
+              'container'       => '',
+              'menu_class'      => 'flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7',
+              'menu_id'         => false,
+              'echo'            => true,
+              'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            ] );
+          ?>
+
+          <!-- <div class="flex items-center ml-auto gap-x-4 max-lg:mr-auto xl:gap-x-7">
             <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
               <i class="icomoon icon-telegram"></i>
             </a>
@@ -39,7 +49,7 @@
             </a>
             <a class="inline-block text-lg leading-none text-white hover:text-accent xl:text-2xl xl:leading-none" href="#" target="_blank">
               <i class="icomoon icon-twitter"></i>
-            </a>
+            </a> -->
           </div>
         </div>
         <div class="flex items-center lg:hidden">
