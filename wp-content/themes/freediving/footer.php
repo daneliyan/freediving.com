@@ -6,7 +6,14 @@
       <div class="flex flex-col items-center justify-center w-full gap-y-12 border-t border-t-white pt-10 pb-8 lg:pt-12 lg:pb-14 lg:justify-between lg:flex-row lg:gap-x-14 2xl:pt-16 2xl:pb-20">
         <div class="flex items-center gap-x-14 max-lg:justify-between max-lg:w-full">
           <?php if( $logo = get_custom_logo() ){ echo $logo; } ?>
-          <a href="contacts.html" class="inline-flex items-center gap-x-5 text-lg font-normal text-white hover:text-accent lg:text-xl">Contact us <i class="icomoon icon-place text-2xl leading-none font-normal"></i></a>
+          <?php 
+          $footer_contacts_link = get_field('footer_contacts_link', 'option');
+          if( $footer_contacts_link ): 
+              $footer_contacts_link_url = $footer_contacts_link['url'];
+              $footer_contacts_link_title = $footer_contacts_link['title'];
+              ?>
+              <a href="<?php echo esc_url($footer_contacts_link_url) ?>" class="inline-flex items-center gap-x-5 text-lg font-normal text-white hover:text-accent lg:text-xl"><?php echo esc_html($footer_contacts_link_title); ?> <i class="icomoon icon-place text-2xl leading-none font-normal"></i></a>
+          <?php endif; ?>
         </div>
         <?php
           if( have_rows('footer_socials', 'option') ): ?>
@@ -25,7 +32,15 @@
           <?php else :
           endif;
         ?>
-        <a href="#" target="_blank" class="inline-block text-lg text-center leading-none text-white text-opacity-60 hover:text-accent lg:text-xl lg:leading-none">Privacy policy</a>
+        <?php 
+        $footer_privacy_link = get_field('footer_privacy_link', 'option');
+        if( $footer_privacy_link ): 
+            $footer_privacy_link_url = $footer_privacy_link['url'];
+            $footer_privacy_link_title = $footer_privacy_link['title'];
+            $footer_privacy_link_target = $footer_privacy_link['target'] ? $footer_privacy_link['target'] : '_self';
+            ?>
+            <a href="<?php echo esc_url($footer_privacy_link_url) ?>" target="<?php echo esc_attr($footer_privacy_link_target); ?>" class="inline-block text-lg text-center leading-none text-white text-opacity-60 hover:text-accent lg:text-xl lg:leading-none"><?php echo esc_html($footer_privacy_link_title); ?></a>
+        <?php endif; ?>
       </div>
     </div>
   </footer>
