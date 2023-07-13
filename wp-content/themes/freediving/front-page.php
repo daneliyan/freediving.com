@@ -21,7 +21,6 @@ get_header(); ?>
           <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
           <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
         </div>
-        <!-- <div class="swiper-pagination"></div> -->
       </div>
       <div class="bg-image absolute left-0 top-0 w-full h-full object-cover z-[-2] lg:hidden"><img src="./img/hero-slider-img.jpg" class="w-full h-full object-cover" alt=""></div>
     </section>

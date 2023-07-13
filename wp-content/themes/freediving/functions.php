@@ -33,13 +33,20 @@ function freediving_scripts() {
   wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper-bundle.min.css');
   // Fancybox
   wp_enqueue_style('fancybox', get_template_directory_uri() . '/src/css/fancybox.min.css');
+  // AOS
+  wp_enqueue_style('aos', get_template_directory_uri() . '/src/css/aos.min.css');
   // App style
   wp_enqueue_style('app', get_template_directory_uri() . '/src/css/main.css');
 
   // SCRIPTS
+  // Swiper
   wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.min.js', array(), null, true);
+  // Fancybox
   wp_enqueue_script('fancybox', get_template_directory_uri() . '/src/js/fancybox.min.js', array(), null, true);
-  wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js', array('swiper', 'fancybox'), null, true);
+  // AOS
+  wp_enqueue_script('aos', get_template_directory_uri() . '/src/js/aos.min.js', array(), null, true);
+  // App js
+  wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js', array('swiper', 'fancybox', 'aos'), null, true);
 }
 add_action('wp_enqueue_scripts', 'freediving_scripts');
 
