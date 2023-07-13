@@ -34,8 +34,6 @@
     </div>
   </footer>
 
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/fancybox.min.js"></script>
-  <script src="./js/main.js"></script>
+  <?php wp_footer(); ?>
 </body>
 </html>

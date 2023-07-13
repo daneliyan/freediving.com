@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/fancybox.min.css">
-
-  <link rel="stylesheet" href="./css/main.css">
+  <?php wp_head(); ?>
   <title>Home Page</title>
 </head>
 <body class="relative flex h-full flex-col bg-main overflow-x-hidden">
@@ -14,7 +11,8 @@
     <div class="mx-auto container px-3 sm:px-6 lg:px-16">
       <nav class="relative z-50 flex justify-between border-0 border-b-white pt-7 pb-6 lg:border-b lg:pt-14 lg:pb-12">
         <div class="flex items-center w-full md:gap-x-14">
-          <a aria-label="Home" href="/#">
+          <?php if( $logo = get_custom_logo() ){ echo $logo; } ?>
+          <!-- <a aria-label="Home" href="/#">
             <svg width="92" height="33" viewBox="0 0 92 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.80006 25.888H15.0401V28H2.56006V5.6H4.80006V25.888Z" fill="white" />
               <path
@@ -24,7 +22,7 @@
               <path
                 d="M86.1506 25.024C83.9106 27.264 81.1692 28.384 77.9266 28.384C74.6839 28.384 71.9426 27.264 69.7026 25.024C67.4626 22.7627 66.3426 20.0213 66.3426 16.8C66.3426 13.5787 67.4626 10.848 69.7026 8.608C71.9426 6.34667 74.6839 5.216 77.9266 5.216C81.1692 5.216 83.9106 6.34667 86.1506 8.608C88.3906 10.848 89.5106 13.5787 89.5106 16.8C89.5106 20.0213 88.3906 22.7627 86.1506 25.024ZM71.2706 23.488C73.0626 25.3013 75.2812 26.208 77.9266 26.208C80.5719 26.208 82.7906 25.3013 84.5826 23.488C86.3746 21.6533 87.2706 19.424 87.2706 16.8C87.2706 14.176 86.3746 11.9573 84.5826 10.144C82.7906 8.30934 80.5719 7.392 77.9266 7.392C75.2812 7.392 73.0626 8.30934 71.2706 10.144C69.4786 11.9573 68.5826 14.176 68.5826 16.8C68.5826 19.424 69.4786 21.6533 71.2706 23.488Z" fill="white" />
             </svg>
-          </a>
+          </a> -->
           <div class="hidden gap-x-8 lg:flex xl:gap-x-14">
             <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="index.html">Home</a>
             <a class="inline-block text-base text-white hover:opacity-80 xl:text-xl" href="about-us.html">About us</a>
