@@ -2101,6 +2101,10 @@ main::before {
   }
 }
 
+.wpcf7-spinner {
+  display: none !important;
+}
+
 .even\:border-l:nth-child(even) {
   border-left-width: 1px;
 }

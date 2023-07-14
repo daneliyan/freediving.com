@@ -477,3 +477,7 @@ main::before {
     background-image: none !important;
   }
 }
+
+.wpcf7-spinner {
+  display: none !important;
+}
