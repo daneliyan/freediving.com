@@ -375,10 +375,10 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
+    <!-- Частично готово. Не сделана карта. -->    
     <section class="place mb-32">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
-        <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase mb-5 lg:text-7xl lg:mb-9 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none">PLACE</h2>
+        <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase mb-5 lg:text-7xl lg:mb-9 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('place_title', 'option'); ?></h2>
       </div>
       <div class="flex max-lg:flex-col mx-auto px-3 sm:px-6 lg:pr-0 justify-center gap-y-10 items-center gap-x-5 lg:justify-between container--fluid">
         <div class="map relative max-lg:w-full h-[520px] lg:w-2/5 lg:h-[610px] 3xl:h-[750px]">
@@ -387,6 +387,7 @@ get_header(); ?>
           <img src="img/map-img.jpg" class="w-full h-full object-cover" alt="">
         </div>
         <!-- Swiper -->
+        <?php if(have_rows('place_slider', 'option')) : ?>
         <div class="swiper placeSwiper max-lg:w-full h-auto lg:w-3/5 lg:h-[610px] 3xl:h-[750px]">
           <div class="swiper-nav relative flex items-center justify-center max-lg:mb-5 lg:ml-auto lg:absolute lg:right-16 lg:bottom-12">
             <div class="swiper-button-prev relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:text-accent lg:hidden"></div>
@@ -394,11 +395,15 @@ get_header(); ?>
             <div class="swiper-button-next relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:text-accent lg:hidden"></div>
           </div>
           <div class="swiper-wrapper max-lg:h-[520px]">
-            <div class="swiper-slide"><img src="./img/place-img-01.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/place-img-01.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/place-img-01.jpg" alt=""></div>
+            <?php while(have_rows('place_slider', 'option')) : the_row(); ?>
+            <?php $img = get_sub_field('img', 'option'); ?>
+              <div class="swiper-slide">
+                <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+              </div>
+            <?php endwhile; ?>
           </div>
         </div>
+        <?php else : endif; ?>
       </div>
     </section>
 
