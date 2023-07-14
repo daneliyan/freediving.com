@@ -59,7 +59,7 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
+    <!-- Готово -->
     <section class="z-0 about-diving relative pt-4 pb-20 mb-32 bg-no-repeat bg-center bg-cover max-lg:mt-64 lg:py-20 2xl:py-32" style="background-image: url('<?php the_field('about_diving_bg'); ?>');">
       <div class="z-10 relative mx-auto container px-3 sm:px-6 lg:px-16">
         <img src="<?php the_field('about_diving_decor'); ?>" class="absolute w-32 h-32 md:w-42 md:h-42 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:-top-48 lg:right-16 lg:bottom-0 xl:w-52 xl:h-52" alt="">
@@ -88,148 +88,6 @@ get_header(); ?>
         <!-- Swiper -->
         <div class="swiper standartSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/freediving-adventure-on-tropical-reefs.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Freediving Adventure on Tropical Reefs</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Get ready for an exhilarating freediving journey to tropical reefs, where you can explore the ocean depths, immerse yourself in the vibrant underwater world, and encounter a diverse range of marine life</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                    <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60">02.02.2023</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/unique-freediving-experience-with-dolphins.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Unique Freediving Experience with Dolphins</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Join us on an unforgettable journey where you can dive into a world of freedom and come face to face with amazing
-                      dolphins. Experienced instructors will guide you through unforgettable freediving sessions</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                    <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60">02.02.2023</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/freediving-among-sunken-treasures.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Freediving among Sunken Treasures</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Embark on an exciting adventure to explore sunken treasures at the bottom of the ocean. Through freediving, you'll
-                      experience the thrill of adventure and unravel the secrets of ancient shipwrecks</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                    <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60">02.02.2023</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/freediving-adventure-on-tropical-reefs.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Freediving Adventure on Tropical Reefs</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Get ready for an exhilarating freediving journey to tropical reefs, where you can explore the ocean depths, immerse yourself in the vibrant underwater world, and encounter a diverse range of marine life</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                    <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60">02.02.2023</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/unique-freediving-experience-with-dolphins.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Unique Freediving Experience with Dolphins</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Join us on an unforgettable journey where you can dive into a world of freedom and come face to face with amazing
-                      dolphins. Experienced instructors will guide you through unforgettable freediving sessions</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                    <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60">02.02.2023</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/freediving-among-sunken-treasures.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Freediving among Sunken Treasures</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Embark on an exciting adventure to explore sunken treasures at the bottom of the ocean. Through freediving, you'll
-                      experience the thrill of adventure and unravel the secrets of ancient shipwrecks</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                    <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60">02.02.2023</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="swiper-slide">
               <div class="card-wrapper">
                 <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/freediving-adventure-on-tropical-reefs.jpg');">
@@ -399,107 +257,34 @@ get_header(); ?>
       </div>
     </section>
 
-    <section class="team z-0 max-lg:mb-32 max-lg:bg-none bg-cover bg-center lg:relative lg:pt-48 lg:pb-80 lg:mb-16" style="background-image: url('./img/team-bg.jpg');">
+    <section class="team z-0 max-lg:mb-32 max-lg:bg-none bg-cover bg-center lg:relative lg:pt-48 lg:pb-80 lg:mb-16" style="background-image: url(<?php the_field('team_bg'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
-        <h2 class="text-6xl text-white font-medium mb-16 max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 lg:mb-4 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none">TEAM</h2>
-        <div class="grid gap-5 md:grid-cols-2">
-          <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-            <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
-              <img src="./img/review-avatar-01.jpg" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="">
-              <div class="flex flex-col">
-                <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5">Julia Rodriguez</h3>
-                <p class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">Marine Awareness Instructor</p>
-              </div>
+        <h2 class="text-6xl text-white font-medium mb-16 max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 lg:mb-4 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('team_title'); ?></h2>
+        <?php
+        $team_cards = get_field('team_cards');
+        if( $team_cards ): ?>
+            <div class="grid gap-5 md:grid-cols-2">
+            <?php foreach( $team_cards as $post ): 
+                setup_postdata($post); ?>
+                  <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
+                    <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
+                      <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="<?php the_title(); ?>">
+                      <div class="flex flex-col">
+                        <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5"><?php the_title(); ?></h3>
+                        <div class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">
+                          <?php if( has_excerpt() ){ the_excerpt(); } else {} ?>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-3xl lg:text-xl lg:leading-7">
+                      <?php the_content(); ?>
+                    </div>
+                  </div>
+            <?php endforeach; ?>
             </div>
-            <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-xl lg:text-xl lg:leading-7">
-              <p>
-                Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely
-                on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring
-                the underwater world without any limitations.
-              </p>
-            </div>
-          </div>
-          <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-            <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
-              <img src="./img/review-avatar-02.jpg" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="">
-              <div class="flex flex-col">
-                <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5">Julia Rodriguez</h3>
-                <p class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">Marine Awareness Instructor</p>
-              </div>
-            </div>
-            <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-xl lg:text-xl lg:leading-7">
-              <p>
-                Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely
-                on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring
-                the underwater world without any limitations.
-              </p>
-            </div>
-          </div>
-          <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-            <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
-              <img src="./img/review-avatar-03.jpg" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="">
-              <div class="flex flex-col">
-                <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5">Julia Rodriguez</h3>
-                <p class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">Marine Awareness Instructor</p>
-              </div>
-            </div>
-            <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-xl lg:text-xl lg:leading-7">
-              <p>
-                Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely
-                on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring
-                the underwater world without any limitations.
-              </p>
-            </div>
-          </div>
-          <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-            <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
-              <img src="./img/review-avatar-04.jpg" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="">
-              <div class="flex flex-col">
-                <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5">Julia Rodriguez</h3>
-                <p class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">Marine Awareness Instructor</p>
-              </div>
-            </div>
-            <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-xl lg:text-xl lg:leading-7">
-              <p>
-                Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely
-                on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring
-                the underwater world without any limitations.
-              </p>
-            </div>
-          </div>
-          <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-            <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
-              <img src="./img/review-avatar-05.jpg" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="">
-              <div class="flex flex-col">
-                <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5">Julia Rodriguez</h3>
-                <p class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">Marine Awareness Instructor</p>
-              </div>
-            </div>
-            <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-xl lg:text-xl lg:leading-7">
-              <p>
-                Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely
-                on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring
-                the underwater world without any limitations.
-              </p>
-            </div>
-          </div>
-          <div class="py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-            <div class="flex items-center w-full mb-7 lg:mb-10 xl:mb-12">
-              <img src="./img/review-avatar-06.jpg" class="w-20 h-20 mr-7 aspect-square rounded-full lg:w-36 lg:h-36 lg:mr-11" alt="">
-              <div class="flex flex-col">
-                <h3 class="text-xl leading-6 font-medium text-white mb-2 lg:mb-5">Julia Rodriguez</h3>
-                <p class="text-base leading-4 text-white text-opacity-80 md:text-xl md:leading-7">Marine Awareness Instructor</p>
-              </div>
-            </div>
-            <div class="grid gap-x-7 text-lg leading-6 text-white text-opacity-60 lg:max-w-xl lg:text-xl lg:leading-7">
-              <p>
-                Freediving is the thrilling art of diving to depths using a single breath. Unlike scuba diving, freedivers rely entirely
-                on their breath-holding ability and body control. This allows them to move freely and gracefully underwater, exploring
-                the underwater world without any limitations.
-              </p>
-            </div>
-          </div>
-        </div>
+            <?php
+            wp_reset_postdata(); ?>
+        <?php endif; ?>
       </div>
     </section>
 
