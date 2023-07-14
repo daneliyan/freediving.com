@@ -287,7 +287,7 @@ get_header(); ?>
         <?php endif; ?>
       </div>
     </section>
-
+    <!-- Готово -->
     <section class="mb-32">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-wrap max-lg:flex-col justify-center gap-y-5 items-center gap-x-7 lg:justify-between">
@@ -335,92 +335,43 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
-    <section class="mb-32">
+    <!-- Готово -->
+    <section class="reviews mb-32 bg-center bg-no-repeat" style="background-image: url(<?php the_field('reviews_bg'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-wrap max-lg:flex-col justify-center gap-y-5 items-center gap-x-7 lg:justify-between">
-          <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none">Reviews</h2>
-          <a href="#" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card max-lg:order-1 max-lg:mt-3 lg:text-xl lg:leading-6 max-lg:hidden hover:shadow-myShadow1">More reviews on Tripadvisor<img src="./img/tripadvisor-logo.png" class="w-9 h-6" alt=""></a>
-          <div class="grid gap-5 w-full md:grid-cols-2 xl:grid-cols-3">
-            <a href="#" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-              <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14">
-                  I had an incredible experience at the freediving school! The instructors were knowledgeable and supportive, and I felt
-                  safe throughout the entire training. Highly recommended!
-              </div>
-              <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
-                <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6">Sarah G.</h3>
-                <div class="rating flex items-center justify-center">
-                  <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url('./img/star-off.svg');"><div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url('./img/star-on.svg');"></div></div>
-                  <div class="rating-agregate hidden">4.65</div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-              <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14">
-                  The freediving course exceeded my expectations. The instructors were patient and helped me overcome my fears. It was a
-                  life-changing experience!
-              </div>
-              <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
-                <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6">John D.</h3>
-                <div class="rating flex items-center justify-center">
-                  <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url('./img/star-off.svg');"><div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url('./img/star-on.svg');"></div></div>
-                  <div class="rating-agregate hidden">4</div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-              <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14">
-                  The freediving school provided top-notch training. The instructors were professional, and the curriculum was
-                  comprehensive. I feel confident and ready to explore the underwater world.
-              </div>
-              <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
-                <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6">Michael L.</h3>
-                <div class="rating flex items-center justify-center">
-                  <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url('./img/star-off.svg');"><div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url('./img/star-on.svg');"></div></div>
-                  <div class="rating-agregate hidden">5</div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-              <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14">
-                  My time at the freediving school was amazing. The instructors created a supportive and friendly atmosphere, and I made
-                  lifelong friends. It was an adventure of a lifetime!
-              </div>
-              <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
-                <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6">Lisa M.</h3>
-                <div class="rating flex items-center justify-center">
-                  <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url('./img/star-off.svg');"><div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url('./img/star-on.svg');"></div></div>
-                  <div class="rating-agregate hidden">3.8</div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-              <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14">
-                  I never thought I could achieve such progress in such a short time. The freediving school's instructors pushed me to my
-                  limits and helped me discover my true potential.
-              </div>
-              <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
-                <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6">Danil D.</h3>
-                <div class="rating flex items-center justify-center">
-                  <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url('./img/star-off.svg');"><div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url('./img/star-on.svg');"></div></div>
-                  <div class="rating-agregate hidden">5</div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-10">
-              <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14">
-                  The freediving school provided an exceptional learning environment. The instructors were patient, passionate, us become
-                  skilled freedivers. I can't wait to continue my journey.
-              </div>
-              <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
-                <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6">Samantha R.</h3>
-                <div class="rating flex items-center justify-center">
-                  <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url('./img/star-off.svg');"><div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url('./img/star-on.svg');"></div></div>
-                  <div class="rating-agregate hidden">4.7</div>
-                </div>
-              </div>
-            </a>
-          </div>
+          <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('reviews_title'); ?></h2>
+          <?php 
+          $reviews_link = get_field('reviews_link');
+          if( $reviews_link ): 
+              $reviews_link_url = $reviews_link['url'];
+              $reviews_link_title = $reviews_link['title'];
+              ?>
+              <a href="<?php echo esc_url($reviews_link_url); ?>" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card max-lg:order-1 max-lg:mt-3 lg:text-xl lg:leading-6 max-lg:hidden hover:shadow-myShadow1"><?php echo esc_html($reviews_link_title); ?><img src="<?php echo get_template_directory_uri() ?>/src/img/tripadvisor-logo.png" class="w-9 h-6" alt=""></a>
+          <?php endif; ?>
+        <?php
+        $reviews_cards = get_field('reviews_cards');
+        if( $reviews_cards ): ?>
+            <div class="grid gap-5 w-full md:grid-cols-2 xl:grid-cols-3">
+            <?php foreach( $reviews_cards as $post ): 
+                setup_postdata($post); ?>
+                <a href="<?php the_field('review_link'); ?>" target="_blank" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:min-h-[295px] lg:p-10">
+                  <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14"><?php the_content(); ?></div>
+                  <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
+                    <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6"><?php the_title(); ?></h3>
+                    <div class="rating flex items-center justify-center">
+                      <div class="stars relative bg-no-repeat bg-[auto_100%] w-[106px] h-4 sm:w-40 sm:h-6" style="background-image: url(<?php echo get_template_directory_uri(); ?>/src/img/star-off.svg);">
+                        <div class="progress absolute top-0 left-0 bg-no-repeat bg-[auto_100%] h-4 sm:h-6" style="background-image: url(<?php echo get_template_directory_uri(); ?>/src/img/star-on.svg);">
+                      </div>
+                    </div>
+                      <div class="rating-agregate hidden"><?php the_field('review_rating'); ?></div>
+                    </div>
+                  </div>
+                </a>
+            <?php endforeach; ?>
+            </div>
+            <?php
+            wp_reset_postdata(); ?>
+        <?php endif; ?>
         </div>
       </div>
     </section>
