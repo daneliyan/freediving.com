@@ -3,6 +3,7 @@
 Template Name: Faq
 */
 get_header(); ?>
+
     <!-- Готово -->
     <section class="faq-head relative z-0 mb-7 max-sm:pt-28 max-sm:mb-32 sm:pt-[5.4rem] lg:pt-0">
       <!-- Swiper -->
@@ -72,7 +73,7 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
+    <!-- Готово -->
     <section class="pb-24 xl:pb-36">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-col justify-between flex-wrap gap-y-10 max-lg:items-center lg:flex-row">
@@ -108,29 +109,8 @@ get_header(); ?>
             </div>
           </div>
 
-          <div class="w-full p-7 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card h-fit lg:p-12 lg:pb-20 xl:w-5/12">
-            <form>
-              <div class="mb-5 lg:mb-6">
-                <label for="name" class="hidden"></label>
-                <input type="text" id="name" class="h-[60px] bg-transparent border border-[#3B4A59] text-white text-lg leading-4 text-opacity-50 outline-none focus:text-opacity-80 focus:border-accent block w-full p-5" placeholder="Name" required>
-              </div>
-              <div class="mb-5 lg:mb-6">
-                <label for="email" class="hidden"></label>
-                <input type="email" id="email" class="h-[60px] bg-transparent border border-[#3B4A59] text-white text-lg leading-4 text-opacity-50 outline-none focus:text-opacity-80 focus:border-accent block w-full p-5" placeholder="Email" required>
-              </div>
-              <div class="mb-5 lg:mb-6">
-                <label for="tel" class="hidden"></label>
-                <input type="tel" id="tel" class="h-[60px] bg-transparent border border-[#3B4A59] text-white text-lg leading-4 text-opacity-50 outline-none focus:text-opacity-80 focus:border-accent block w-full p-5" placeholder="Phone number" required>
-              </div>
-              <div class="mb-5 lg:mb-6">
-                <label for="message" class="hidden">Message</label>
-                <textarea id="message" rows="4" class="min-h-[60px] max-h-80 bg-transparent border border-[#3B4A59] text-white text-lg leading-4 text-opacity-50 outline-none focus:text-opacity-80 focus:border-accent block w-full p-5" placeholder="Message"></textarea>
-              </div>
-              <div class="flex items-center max-lg:justify-center max-lg:flex-col w-full gap-7 mt-10 lg:mt-[72px]">
-                <button type="submit" class="w-full h-[60px] text-white font-medium text-lg leading-none px-7 py-5 text-center border-white border border-opacity-20 lg:w-auto lg:text-xl lg:leading-none hover:backdrop-blur-lg hover:bg-card">Send</button>
-                <p class="text-white text-sm font-normal opacity-50 max-lg:text-center">by clicking the "submit" button, you agree to the <a href="#" class="underline hover:no-underline">privacy policy</a></p>
-              </div>
-            </form>
+          <div class="w-full p-7 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card h-fit lg:p-12 xl:w-5/12">
+            <?php echo do_shortcode('[contact-form-7 id="175" title="Form Message"]'); ?>
           </div>
         </div>
       </div>
