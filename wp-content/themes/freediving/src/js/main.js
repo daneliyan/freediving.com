@@ -221,11 +221,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
       });
     });
-    swiperInstances[3].update();
+    swiperInstances.forEach(function (slider) {
+      slider.update();
+    });
     setTimeout(function () {
       for (const slider of swiperInstances) {
         slider.update();
       }
     }, 50);
   }
+
 });

@@ -6,7 +6,7 @@ get_header(); ?>
     <!-- Готово -->
     <section class="hero relative z-0 pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
-        <div class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
+        <div data-aos="fade-up" class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
           <h1 class="text-white uppercase font-medium max-w-[1440px] text-3xl leading-9 mb-7 max-lg:mb-64 max-lg:text-center md:text-6xl md:leading-[66px] 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('hero_title'); ?></h1>
           <div class="max-lg:text-center text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8 lg:mb-14"><?php the_field('hero_text'); ?></div>
         </div>
@@ -306,7 +306,7 @@ get_header(); ?>
             $faq_query = new WP_Query( [
               'posts_per_page' => 5,
               'post_type' => 'faq',
-              'orderby'        => 'ASC',
+              'order'        => 'ASC',
             ] );
             if ( $faq_query->have_posts() ) {
               while ( $faq_query->have_posts() ) {
@@ -354,7 +354,7 @@ get_header(); ?>
             <div class="grid gap-5 w-full md:grid-cols-2 xl:grid-cols-3">
             <?php foreach( $reviews_cards as $post ): 
                 setup_postdata($post); ?>
-                <a href="<?php the_field('review_link'); ?>" target="_blank" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:min-h-[295px] lg:p-10">
+                <a href="<?php the_field('review_link'); ?>" target="_blank" class="flex flex-col py-8 pl-7 pr-4 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:min-h-[295px] lg:p-10 hover:shadow-myShadow1">
                   <div class="line-clamp-4 text-lg leading-6 text-white text-opacity-80 mb-10 max-sm:text-center lg:text-xl lg:leading-7 lg:mb-14"><?php the_content(); ?></div>
                   <div class="flex items-center justify-between gap-x-5 w-full mt-auto">
                     <h3 class="text-lg leading-5 font-medium text-white lg:text-xl lg:leading-6"><?php the_title(); ?></h3>
@@ -406,7 +406,7 @@ get_header(); ?>
         <?php else : endif; ?>
       </div>
     </section>
-
+    <!-- Почти Готово -->
     <section class="ba z-0 relative bg-cover bg-center pt-28 pb-36" style="background-image: url(<?php the_field('cta_bg', 'option'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-col justify-between flex-wrap gap-y-10 max-lg:items-center lg:flex-row">
@@ -442,6 +442,7 @@ get_header(); ?>
               <?php endif; ?>
             </div>
           </div>
+          
           <div class="w-full p-7 text-white border-white border border-opacity-20 backdrop-blur-lg bg-card h-fit lg:p-12 lg:pb-20 xl:w-5/12">
             <!-- <form>
               <div class="mb-5 lg:mb-6">

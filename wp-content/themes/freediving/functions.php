@@ -35,6 +35,7 @@ function freediving_scripts() {
   wp_enqueue_style('fancybox', get_template_directory_uri() . '/src/css/fancybox.min.css');
   // AOS
   wp_enqueue_style('aos', get_template_directory_uri() . '/src/css/aos.min.css');
+  // wp_enqueue_style('animate', get_template_directory_uri() . '/src/css/animate.min.css');
   // App style
   wp_enqueue_style('app', get_template_directory_uri() . '/src/css/main.css');
 
