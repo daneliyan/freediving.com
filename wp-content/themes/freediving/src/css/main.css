@@ -843,10 +843,6 @@ body {
   aspect-ratio: 1 / 1;
 }
 
-.aspect-\[39\/53\] {
-  aspect-ratio: 39/53;
-}
-
 .h-20 {
   height: 5rem;
 }
@@ -1998,7 +1994,7 @@ main::before {
 }
 
 .accordion-content p {
-  max-width: 700px;
+  max-width: 1420px;
 }
 
 .accordion-open .icon-chevron {
@@ -2620,10 +2616,6 @@ main::before {
     aspect-ratio: 66/62;
   }
 
-  .lg\:aspect-\[103\/39\] {
-    aspect-ratio: 103/39;
-  }
-
   .lg\:h-36 {
     height: 9rem;
   }
@@ -2681,6 +2673,10 @@ main::before {
     width: fit-content;
   }
 
+  .lg\:max-w-4xl {
+    max-width: 56rem;
+  }
+
   .lg\:max-w-\[40\%\] {
     max-width: 40%;
   }
@@ -2691,10 +2687,6 @@ main::before {
 
   .lg\:max-w-xl {
     max-width: 36rem;
-  }
-
-  .lg\:max-w-4xl {
-    max-width: 56rem;
   }
 
   .lg\:basis-2\/5 {

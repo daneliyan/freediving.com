@@ -391,7 +391,7 @@ main::before {
   transition: all 0.25s ease;
 }
 .accordion-content p {
-  max-width: 700px;
+  max-width: 1420px;
 }
 .accordion-open .icon-chevron {
   transform: rotate(180deg);

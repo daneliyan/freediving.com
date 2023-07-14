@@ -256,7 +256,7 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
+    <!-- Готово -->
     <section class="team z-0 max-lg:mb-32 max-lg:bg-none bg-cover bg-center lg:relative lg:pt-48 lg:pb-80 lg:mb-16" style="background-image: url(<?php the_field('team_bg'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <h2 class="text-6xl text-white font-medium mb-16 max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 lg:mb-4 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('team_title'); ?></h2>
@@ -291,57 +291,47 @@ get_header(); ?>
     <section class="mb-32">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-wrap max-lg:flex-col justify-center gap-y-5 items-center gap-x-7 lg:justify-between">
-          <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none">FAQ</h2>
-          <a href="faq.html" class="inline-flex items-center justify-center py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card max-lg:order-1 max-lg:mt-3 lg:text-xl lg:leading-6 hover:shadow-myShadow1">All FAQ</a>
+          <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('faq_title'); ?></h2>
+          <?php 
+          $faq_link = get_field('faq_link');
+          if( $faq_link ): 
+              $faq_link_url = $faq_link['url'];
+              $faq_link_title = $faq_link['title'];
+              ?>
+              <a href="<?php echo esc_url($faq_link_url); ?>" class="inline-flex items-center justify-center py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card max-lg:order-1 max-lg:mt-3 lg:text-xl lg:leading-6 hover:shadow-myShadow1"><?php echo esc_html($faq_link_title); ?></a>
+          <?php endif; ?>
           <div class="grid gap-y-5 w-full">
-            <div  class="accordion grid w-full">
-              <h3>
-                <button type="button" class="flex items-center justify-between w-full p-7 text-lg font-medium text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl hover:shadow-myShadow1">
-                  <span class="text-left">What level of preparation is required to start practicing freediving?</span>
-                  <i class="icomoon icon-chevron w-5 h-5 text-lg text-white shrink-0 ml-3 lg:mr-5"></i>
-                </button>
-              </h3>
-              <div class="accordion-content">
-                <div class="p-7 w-full text-lg font-normal text-white text-opacity-80 border-white border border-t-0 border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl"><p>We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents or legal guardians.</p></div>
-              </div>
-            </div>
-            <div  class="accordion grid w-full">
-              <h3>
-                <button type="button" class="flex items-center justify-between w-full p-7 text-lg font-medium text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl hover:shadow-myShadow1">
-                  <span class="text-left">What equipment is necessary for freediving?</span>
-                  <i class="icomoon icon-chevron w-5 h-5 text-lg text-white shrink-0 ml-3 lg:mr-5"></i>
-                </button>
-              </h3>
-              <div class="accordion-content">
-                <div class="p-7 w-full text-lg font-normal text-white text-opacity-80 border-white border border-t-0 border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl"><p>We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents or legal guardians.We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents or legal guardians.We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents
-                or legal guardians.</p></div>
-              </div>
-            </div>
-            <div  class="accordion grid w-full">
-              <h3>
-                <button type="button" class="flex items-center justify-between w-full p-7 text-lg font-medium text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl hover:shadow-myShadow1">
-                  <span class="text-left">What level of preparation is required to start practicing freediving?</span>
-                  <i class="icomoon icon-chevron w-5 h-5 text-lg text-white shrink-0 ml-3 lg:mr-5"></i>
-                </button>
-              </h3>
-              <div class="accordion-content">
-                <div class="p-7 w-full text-lg font-normal text-white text-opacity-80 border-white border border-t-0 border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl"><p>We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents or legal guardians.We accept students aged 12 and above.</p></div>
-              </div>
-            </div>
-            <div  class="accordion grid w-full">
-              <h3>
-                <button type="button" class="flex items-center justify-between w-full p-7 text-lg font-medium text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl hover:shadow-myShadow1">
-                  <span class="text-left">What equipment is necessary for freediving?</span>
-                  <i class="icomoon icon-chevron w-5 h-5 text-lg text-white shrink-0 ml-3 lg:mr-5"></i>
-                </button>
-              </h3>
-              <div class="accordion-content">
-                <div class="p-7 w-full text-lg font-normal text-white text-opacity-80 border-white border border-t-0 border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl"><p>We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents or legal guardians.We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents or legal guardians.We accept students aged 12 and above. Participants under the age of 18 must have written permission from their parents
-                or legal guardians.</p></div>
-              </div>
-            </div>
+            <?php    
+            global $post;
+            $faq_query = new WP_Query( [
+              'posts_per_page' => 5,
+              'post_type' => 'faq',
+              'orderby'        => 'ASC',
+            ] );
+            if ( $faq_query->have_posts() ) {
+              while ( $faq_query->have_posts() ) {
+                $faq_query->the_post();
+                ?>
+                  <div  class="accordion grid w-full">
+                    <h3>
+                      <button type="button" class="flex items-center justify-between w-full p-7 text-lg font-medium text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl hover:shadow-myShadow1">
+                        <span class="text-left"><?php the_title(); ?></span>
+                        <i class="icomoon icon-chevron w-5 h-5 text-lg text-white shrink-0 ml-3 lg:mr-5"></i>
+                      </button>
+                    </h3>
+                    <div class="accordion-content">
+                      <div class="p-7 w-full text-lg font-normal text-white text-opacity-80 border-white border border-t-0 border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl">
+                        <?php the_content(); ?>
+                      </div>
+                    </div>
+                  </div>
+                <?php 
+              }
+            } else {}
+            wp_reset_postdata();
+            ?>
           </div>
-          <img src="img/faq-decor.png" class="absolute object-contain w-20 right-2 -top-14 aspect-[19/27] lg:w-48 lg:right-16 lg:-top-72" alt="">
+          <img src="<?php the_field('faq_decor'); ?>" class="absolute object-contain w-20 right-2 -top-14 aspect-[19/27] lg:w-48 lg:right-16 lg:-top-72" alt="">
         </div>
       </div>
     </section>
