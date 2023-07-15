@@ -46,13 +46,13 @@ get_header(); ?>
                 <div class="card-wrapper">
                   <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 3xl:min-h-[740px]" style="background-image: url(<?php the_field('trip_card_img'); ?>);">
                     <!-- дата -->
-                    <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden"><?php the_time('m.d.Y'); ?></div>
-                    <a href="#" class="card-content z-10">
+                    <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden"><?php the_time('d.m.Y'); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="card-content z-10">
                       <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11"><?php the_field('trip_title'); ?></h3>
                       <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7"><?php the_field('trip_text'); ?></div>
                     </a>
                     <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
-                      <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60"><?php the_time('m.d.Y'); ?></div>
+                      <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60"><?php the_time('d.m.Y'); ?></div>
                       <?php $booknow_link = get_field('booknow_link', 'option');
                       if( $booknow_link ): 
                           $booknow_link_url = $booknow_link['url'];

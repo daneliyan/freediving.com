@@ -1,8 +1,4 @@
-<?php
-/*
-
-*/
-get_header(); ?>
+<?php get_header(); ?>
 
     <section class="category relative z-0 bg-cover bg-no-repeat bg-center pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48" style="background-image: url('./img/trips-article-img.jpg');">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
