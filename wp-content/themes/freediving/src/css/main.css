@@ -2781,6 +2781,11 @@ body {
     width: fit-content;
   }
 
+  .lg\:w-min {
+    width: -moz-min-content;
+    width: min-content;
+  }
+
   .lg\:max-w-4xl {
     max-width: 56rem;
   }
