@@ -406,7 +406,7 @@ get_header(); ?>
         <?php else : endif; ?>
       </div>
     </section>
-    <!-- Почти Готово -->
+    <!-- Готово -->
     <section class="ba z-0 relative bg-cover bg-center pt-28 pb-36" style="background-image: url(<?php the_field('cta_bg', 'option'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-col justify-between flex-wrap gap-y-10 max-lg:items-center lg:flex-row">

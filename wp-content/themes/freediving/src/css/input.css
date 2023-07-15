@@ -190,6 +190,19 @@ main::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%);
   z-index: 8;
 }
+body {
+  position: relative;
+  font-family: 'Gilroy', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #0a1a2a;
+}
+.page-template-contact-us {
+  background-size: cover;
+  background-position: center;
+}
 
 .nav-menu {
   position: fixed;

@@ -1754,6 +1754,21 @@ main::before {
   z-index: 8;
 }
 
+body {
+  position: relative;
+  font-family: 'Gilroy', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #0a1a2a;
+}
+
+.page-template-contact-us {
+  background-size: cover;
+  background-position: center;
+}
+
 .nav-menu {
   position: fixed;
   top: 0;

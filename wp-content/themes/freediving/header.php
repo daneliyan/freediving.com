@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 </head>
-<body class="relative flex h-full flex-col bg-main overflow-x-hidden">
+<body <?php body_class(); ?> style="background-image: url(<?php if (is_page('contacts')) : ?><?php the_field('background_image_contacts');?>
+  <?php elseif (is_page('course')) : ?><?php the_field('background_image_course');?><?php endif; ?>);">
+
   <header class="header z-10 absolute top-0 left-0 right-0">
     <div class="mx-auto container px-3 sm:px-6 lg:px-16">
       <nav class="relative z-50 flex justify-between border-0 border-b-white pt-7 pb-6 lg:border-b lg:pt-14 lg:pb-12">

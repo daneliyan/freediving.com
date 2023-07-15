@@ -52,6 +52,22 @@ function freediving_scripts() {
 add_action('wp_enqueue_scripts', 'freediving_scripts');
 
 
+add_filter( 'body_class', 'wp_kama_body_class_filter', 10, 2 );
+
+/**
+ * Function for `body_class` filter-hook.
+ * 
+ * @param string[] $classes   An array of body class names.
+ * @param string[] $css_class An array of additional class names added to the body.
+ *
+ * @return string[]
+ */
+function wp_kama_body_class_filter( $classes, $css_class ){
+
+	// filter...
+	return $classes;
+}
+
 /**
  * Регистрация областей меню
  */
