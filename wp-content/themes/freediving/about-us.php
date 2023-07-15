@@ -9,8 +9,7 @@ get_header(); ?>
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="content flex items-center justify-center flex-col gap-x-10 lg:flex-row-reverse lg:justify-between">
           <div class="lg:w-4/12 2xl:w-6/12 relative">
-            <img src="<?php the_field('about_decor'); ?>" class="absolute w-40 rotate-[30deg] -right-16 -top-16 max-lg:hidden lg:-right-20 lg:-top-10 lg:z-10 xl:w-80" alt="">
-            <h1 class="text-white uppercase font-medium max-w-[1440px] text-3xl leading-9 mb-7 max-lg:mb-64 max-lg:text-center md:text-6xl md:leading-[66px] 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('about_title'); ?></h1>
+            <h1 class="relative text-white uppercase font-medium max-w-[1440px] text-3xl leading-9 mb-7 max-lg:mb-64 max-lg:text-center lg:w-fit md:text-6xl md:leading-[66px] 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('about_title'); ?><img src="<?php the_field('about_decor'); ?>" class="absolute w-40 rotate-[30deg] max-lg:hidden lg:-right-24 2xl:-right-56 lg:-top-16 lg:z-10 2xl:w-80" alt=""></h1>
           </div>
           <div class="py-8 px-6 border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:w-8/12 2xl:w-5/12">
             <div class="grid gap-y-7 max-lg:text-center text-lg leading-6 text-white text-opacity-60 lg:text-xl lg:leading-8"><?php the_field('about_text'); ?></div>

@@ -2575,8 +2575,16 @@ body {
     right: -5rem;
   }
 
+  .lg\:-right-24 {
+    right: -6rem;
+  }
+
   .lg\:-top-10 {
     top: -2.5rem;
+  }
+
+  .lg\:-top-16 {
+    top: -4rem;
   }
 
   .lg\:-top-6 {
@@ -3155,6 +3163,10 @@ body {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:-right-56 {
+    right: -14rem;
+  }
+
   .\32xl\:-top-6 {
     top: -1.5rem;
   }
@@ -3185,6 +3197,10 @@ body {
 
   .\32xl\:w-6\/12 {
     width: 50%;
+  }
+
+  .\32xl\:w-80 {
+    width: 20rem;
   }
 
   .\32xl\:max-w-\[40\%\] {

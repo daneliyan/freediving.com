@@ -4,14 +4,21 @@ Template Name: Trips
 */
 get_header(); ?>
 
-
-    <section class="category relative z-0 bg-cover bg-no-repeat bg-center pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48" style="background-image: url('./img/trips-bg.jpg');">
+    <!-- Готово -->
+    <section class="category relative z-0 bg-cover bg-no-repeat bg-center pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48" style="background-image: url(<?php the_field('trips_bg'); ?>);">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
-          <h1 class="text-white uppercase font-medium max-w-6xl text-3xl leading-9 mb-7 max-lg:mb-60 max-lg:text-center md:text-6xl md:leading-[66px] lg:mb-10 2xl:text-8xl 2xl:leading-[100px]">Freediving Adventure on&nbsp;Tropical Reefs</h1>
-          <p class="max-lg:text-center text-lg leading-6 text-white max-w-2xl max-lg:order-2 lg:text-xl lg:leading-8 lg:mb-16">Get ready for an exhilarating freediving journey to tropical reefs, where you can explore the ocean depths, immerse yourself in the vibrant underwater world, and encounter a diverse range of marine life</p>
+          <h1 class="text-white uppercase font-medium max-w-6xl text-3xl leading-9 mb-7 max-lg:mb-60 max-lg:text-center md:text-6xl md:leading-[66px] lg:mb-10 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('trips_title'); ?></h1>
+          <div class="max-lg:text-center text-lg leading-6 text-white max-w-2xl max-lg:order-2 lg:text-xl lg:leading-8 lg:mb-16"><?php the_field('trips_text'); ?></div>
           <div class="flex gap-x-10 max-lg:order-1 max-lg:mb-7">
-            <a href="#" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card lg:text-xl lg:leading-6 hover:shadow-myShadow1">Book now<i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+            <?php $trips_link_booknow = get_field('trips_link_booknow');
+            if( $trips_link_booknow ): 
+                $trips_link_booknow_url = $trips_link_booknow['url'];
+                $trips_link_booknow_title = $trips_link_booknow['title'];
+                $trips_link_booknow_target = $trips_link_booknow['target'] ? $trips_link_booknow['target'] : '_self';
+                ?>
+                <a href="<?php echo esc_url( $trips_link_booknow_url ); ?>" target="<?php echo esc_attr( $trips_link_booknow_target ); ?>" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card lg:text-xl lg:leading-6 hover:shadow-myShadow1"><?php echo esc_html( $trips_link_booknow_title ); ?><i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
