@@ -3257,4 +3257,8 @@ body {
   .\33xl\:h-\[750px\] {
     height: 750px;
   }
+
+  .\33xl\:min-h-\[740px\] {
+    min-height: 740px;
+  }
 }
