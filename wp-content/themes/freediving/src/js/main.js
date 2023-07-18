@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   /**
    * Инициализация плагина AOS
    */
-  AOS.init();
+  // AOS.init();
+
 
   /**
    * Burger Menu
@@ -175,60 +176,94 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   /**
-   * Цикл для слайдеров одинакового типа (.standartSwiper) с родителем (.standartbl)
+   * Слайдер Trips на главной странице
    */
-  if (document.querySelectorAll('.standartSwiper').length > 0) {
-    let swiperInstances = [];
-    const gallerySwipers = document.querySelectorAll('.standartSwiper');
-    gallerySwipers.forEach(function (element, index) {
-      const $this = element;
-      // var standartbl = document.querySelector(".standartbl");
-      // var standartbl = $this.querySelector(".standartbl");
-      var standartbl = $this.closest(".standartbl");
-      $this.classList.add("instance-" + index);
-      standartbl.querySelector(".swiper-pagination").className += " pagination-" + index;
-      standartbl.querySelector(".swiper-button-prev").className += " prev-" + index;
-      standartbl.querySelector(".swiper-button-next").className += " next-" + index;
-      swiperInstances[index] = new Swiper(".instance-" + index, {
+  var tripsSwiper = new Swiper(".tripsSwiper", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    navigation: {
+      prevEl: ".trips-swiper-nav .swiper-button-prev",
+      nextEl: ".trips-swiper-nav .swiper-button-next",
+    },
+    pagination: {
+      el: ".trips-swiper-nav .swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        // Добавляем ведущий ноль к числам от 1 до 9
+        var bulletNumber = (index + 1).toString().padStart(2, '0');
+        return '<span class="' + className + '">' + bulletNumber + "</span>";
+      },
+    },
+    breakpoints: {
+      320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 20,
-        navigation: {
-          prevEl: ".prev-" + index,
-          nextEl: ".next-" + index,
-        },
-        pagination: {
-          el: '.pagination-' + index,
-          clickable: true,
-          renderBullet: function (index, className) {
-            var bulletNumber = (index + 1).toString().padStart(2, '0');
-            return '<span class="' + className + '">' + bulletNumber + "</span>";
-          },
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-          },
-          768: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-          1280: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-          }
-        }
-      });
-    });
-    swiperInstances.forEach(function (slider) {
-      slider.update();
-    });
-    setTimeout(function () {
-      for (const slider of swiperInstances) {
-        slider.update();
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
       }
-    }, 50);
-  }
+    }
+  });
+
+  /**
+   * Слайдер Courses на главной странице
+   */
+  var coursesSwiper = new Swiper(".coursesSwiper", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    navigation: {
+      prevEl: ".courses-swiper-nav .swiper-button-prev",
+      nextEl: ".courses-swiper-nav .swiper-button-next",
+    },
+    pagination: {
+      el: ".courses-swiper-nav .swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        // Добавляем ведущий ноль к числам от 1 до 9
+        var bulletNumber = (index + 1).toString().padStart(2, '0');
+        return '<span class="' + className + '">' + bulletNumber + "</span>";
+      },
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      }
+    }
+  });
+
 
 });
+
+  /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+  // const sr = ScrollReveal({
+  //     origin: 'bottom',
+  //     distance: '60px',
+  //     duration: 2500,
+  //     delay: 400,
+  //     reset: true
+  // })
+
+  // sr.reveal('.fade-up')
+
+    // AOS.init();
+
+
+
+    // new WOW().init();

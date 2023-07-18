@@ -16,7 +16,7 @@
             wp_nav_menu( [
               'theme_location'  => 'header',
               'container'       => '',
-              'menu_class'      => 'hidden gap-x-8 lg:flex xl:gap-x-14',
+              'menu_class'      => 'hidden gap-x-8 lg:flex xl:gap-x-14 list-none',
               'menu_id'         => false,
               'echo'            => true,
               'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -66,7 +66,7 @@
               wp_nav_menu( [
                 'theme_location'  => 'header',
                 'container'       => '',
-                'menu_class'      => 'mob-menu flex flex-col gap-y-7',
+                'menu_class'      => 'mob-menu flex flex-col gap-y-7 list-none',
                 'menu_id'         => false,
                 'echo'            => true,
                 'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',

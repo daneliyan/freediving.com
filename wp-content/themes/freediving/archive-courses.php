@@ -23,7 +23,7 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
+    <!-- Готово -->
     <section class="standartbl mb-32">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="flex max-lg:flex-col max-lg:justify-center gap-y-5 items-center gap-x-7 mb-6 lg:items-end">

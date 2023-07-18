@@ -6,7 +6,7 @@ get_header(); ?>
     <!-- Готово -->
     <section class="hero relative z-0 pt-32 pb-16 mb-24 sm:mb-32 min-h-[680px] sm:min-h-[90vh] lg:pt-[230px] lg:pb-48">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
-        <div data-aos="fade-up" class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
+        <div class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
           <h1 class="text-white uppercase font-medium max-w-[1440px] text-3xl leading-9 mb-7 max-lg:mb-64 max-lg:text-center md:text-6xl md:leading-[66px] 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('hero_title'); ?></h1>
           <div class="max-lg:text-center text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8 lg:mb-14"><?php the_field('hero_text'); ?></div>
         </div>
@@ -14,16 +14,23 @@ get_header(); ?>
       <div class="swiper-nav relative flex items-center justify-center max-lg:hidden lg:ml-auto lg:absolute lg:right-16 lg:bottom-12">
         <div class="swiper-pagination relative bottom-auto z-10"></div>
       </div>
-      <!-- Swiper -->
-      <?php if( have_rows('hero_slider') ): ?>
-      <div class="swiper heroSwiper absolute left-0 top-0 w-full h-full z-[-2] max-lg:hidden">
-        <div class="swiper-wrapper">
-          <?php while( have_rows('hero_slider') ) : the_row(); ?>
-              <div class="swiper-slide"><img src="<?php the_sub_field('img'); ?>" alt=""></div>
-          <?php endwhile; ?>
-        </div>
-      </div>
-      <?php else : endif; ?>
+      <?php
+      // проверяем есть ли данные в гибком содержании
+      if( have_rows('hero_choice') ):
+        while ( have_rows('hero_choice') ) : the_row();
+          if( get_row_layout() == 'video' ): ?>
+            <video class="hero-video" src="<?php the_sub_field('hero_video') ?>" autoplay muted loop></video>
+          <?php elseif( get_row_layout() == 'slider' ): ?>
+            <div class="swiper heroSwiper absolute left-0 top-0 w-full h-full z-[-2] max-lg:hidden">
+              <div class="swiper-wrapper">
+                <?php while( have_rows('hero_slider') ) : the_row(); ?>
+                  <div class="swiper-slide"><img src="<?php the_sub_field('img'); ?>" alt=""></div>
+                <?php endwhile; ?>
+              </div>
+            </div>
+          <?php endif;
+        endwhile;
+      else : endif; ?>
       <div class="bg-image absolute left-0 top-0 w-full h-full object-cover z-[-2] lg:hidden">
         <img src="<?php the_field('hero_mob_bg'); ?>" class="w-full h-full object-cover" alt="">
       </div>
@@ -77,25 +84,25 @@ get_header(); ?>
         <div class="flex max-lg:flex-col max-lg:justify-center gap-y-5 items-center gap-x-7 mb-6 lg:items-end">
           <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('tripsbll_title'); ?></h2>
           <div class="text-lg leading-6 text-white max-w-3xl mb-3 max-lg:text-center lg:text-xl lg:leading-8 lg:max-w-[80%] 2xl:max-w-[40%]"><?php the_field('tripsbll_text'); ?></div>
-          <div class="swiper-nav relative flex items-center justify-center lg:ml-auto">
+          <div class="trips-swiper-nav swiper-nav relative flex items-center justify-center lg:ml-auto">
             <div class="swiper-button-prev relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:text-accent lg:hidden"></div>
             <div class="swiper-pagination relative bottom-auto"></div>
             <div class="swiper-button-next relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:text-accent lg:hidden"></div>
           </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper standartSwiper">
+        <div class="swiper tripsSwiper">
           <div class="swiper-wrapper">
           <?php    
           global $post;
-          $news_query = new WP_Query( [
+          $trips_query = new WP_Query( [
             'posts_per_page' => -1,
             'post_type' => 'trips',
             'order'        => 'ASC',
           ] );
-          if ( $news_query->have_posts() ) {
-            while ( $news_query->have_posts() ) {
-              $news_query->the_post();
+          if ( $trips_query->have_posts() ) {
+            while ( $trips_query->have_posts() ) {
+              $trips_query->the_post();
               ?>
               <div class="swiper-slide">
                 <div class="card-wrapper">
@@ -136,95 +143,67 @@ get_header(); ?>
         </div>
       </div>
     </section>
-
-    <section class="standartbl max-lg:mb-32">
+    <!-- Готово -->
+    <section class="standartbl mb-32">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="flex max-lg:flex-col max-lg:justify-center gap-y-5 items-center gap-x-7 mb-6 lg:items-end">
-          <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none">Courses</h2>
-          <div class="swiper-nav relative flex items-center justify-center lg:ml-auto">
+          <h2 class="text-6xl text-white font-medium max-lg:text-center text-opacity-5 uppercase lg:text-7xl lg:text-opacity-15 xl:text-9xl 2xl:text-[10rem] max-2xl:leading-none"><?php the_field('coursebll_title'); ?></h2>
+          <div class="trips-swiper-nav swiper-nav relative flex items-center justify-center lg:ml-auto">
             <div class="swiper-button-prev relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:text-accent lg:hidden"></div>
             <div class="swiper-pagination relative bottom-auto"></div>
             <div class="swiper-button-next relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:text-accent lg:hidden"></div>
           </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper standartSwiper">
+        <div class="swiper coursesSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/advanced-freediving-training-program.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Advanced Freediving Training Program</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Take your freediving skills to new depths with our advanced training program. Designed for experienced freedivers, this
-                      program focuses on advanced techniques, breath-hold exercises</p>
+          <?php    
+          global $post;
+          $courses_query = new WP_Query( [
+            'posts_per_page' => -1,
+            'post_type' => 'courses',
+            'order'        => 'ASC',
+          ] );
+          if ( $courses_query->have_posts() ) {
+            while ( $courses_query->have_posts() ) {
+              $courses_query->the_post();
+              ?>
+              <div class="swiper-slide">
+                <div class="card-wrapper">
+                  <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 3xl:min-h-[740px]" style="background-image: url(<?php the_field('course_card_img'); ?>);">
+                    <!-- дата -->
+                    <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden"><?php the_time('d.m.Y'); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="card-content z-10">
+                      <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11"><?php the_field('course_title'); ?></h3>
+                      <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7"><?php the_field('course_descr'); ?></div>
+                    </a>
+                    <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
+                      <div class="text-xl font-bold text-white"><?php the_field('course_price'); ?></div>
+                      <?php $booknow_link = get_field('booknow_link', 'option');
+                      if( $booknow_link ): 
+                          $booknow_link_url = $booknow_link['url'];
+                          $booknow_link_title = $booknow_link['title'];
+                          $booknow_link_target = $booknow_link['target'] ? $booknow_link['target'] : '_self';
+                          ?>
+                          <a href="<?php echo esc_url( $booknow_link_url ); ?>" target="<?php echo esc_attr( $booknow_link_target ); ?>" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden"><?php echo esc_html( $booknow_link_title ); ?><i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+                      <?php endif; ?>
                     </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:hidden">
-                    <div class="text-xl font-bold text-white">$ 100</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
                   </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+                  <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
+                    <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
+                      <a href="<?php echo esc_url( $booknow_link_url ); ?>" target="<?php echo esc_attr( $booknow_link_target ); ?>" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent"><?php echo esc_html( $booknow_link_title ); ?> <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+                      <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10"><?php the_field('course_price'); ?></div>
+                    </div>
                   </div>
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">$ 100</div>
                 </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/intermediate-freediving-training-program.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Intermediate Freediving Training Program</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Ready to take your freediving skills to the next level? Our intermediate training program is tailored for those who have
-                      some experience in freediving and want to enhance their techniques and performance</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:hidden">
-                    <div class="text-xl font-bold text-white">$ 100</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">$ 100</div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-wrapper">
-                <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 2xl:min-h-[740px]" style="background-image: url('./img/beginner-freediving-training-program.jpg');">
-                  <!-- дата -->
-                  <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden">02.02.2023</div>
-                  <a href="#" class="card-content z-10">
-                    <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11">Beginner Freediving Training Program</h3>
-                    <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7">
-                      <p>Embark on an incredible journey into the world of freediving with our beginner training program. Perfect for those new
-                      to freediving, this program provides a comprehensive introduction</p>
-                    </div>
-                  </a>
-                  <div class="flex items-center justify-between w-full max-lg:hidden">
-                    <div class="text-xl font-bold text-white">$ 100</div>
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent max-lg:hidden">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                </div>
-                <div class="flex justify-center w-full h-20 border border-t-0 border-white border-opacity-10 rounded-b-[1.25rem] lg:hidden">
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">
-                    <a href="#" class="inline-flex gap-x-5 text-xl font-bold text-white hover:text-accent">Book now <i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-                  </div>
-                  <div class="flex items-center justify-center w-1/2 text-xl font-bold text-white even:border-l even:border-l-white even:border-opacity-10">$ 100</div>
-                </div>
-              </div>
-            </div>
+              <?php 
+            }
+          } else {
+            // Постов не найдено
+          }
+          wp_reset_postdata(); // Сбрасываем $post
+          ?>
           </div>
         </div>
       </div>
