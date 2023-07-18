@@ -474,8 +474,17 @@ body {
 .reviews {
   background-size: 100% auto;
 }
+ul {
+  padding-left: 30px;
+}
 .list-disc {
   padding-left: 30px;
+}
+ol, ul {
+  list-style: initial !important;
+}
+ul li::marker {
+  font-size: 0.8em;
 }
 
 @media screen and (max-width: 1023.98px) {
