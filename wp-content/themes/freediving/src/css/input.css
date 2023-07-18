@@ -331,6 +331,11 @@ body {
   background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
   z-index: -1;
 }
+.course-infoitems>div:nth-child(1),
+.course-infoitems>div:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+  padding-bottom: 60px;
+}
 @media screen and (max-width: 1023.98px) {
   .single-courses main {
     background-size: 200% auto;

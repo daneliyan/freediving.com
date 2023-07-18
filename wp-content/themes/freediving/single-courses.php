@@ -27,42 +27,52 @@
       </div>
     </section>
 
+    
     <section class="coursebl overflow-hidden relative z-0 pt-0 mb-32">
       <div class="mx-auto relative container px-3 sm:px-6 lg:px-16">
-        <div class="w-full pt-8 pb-12 px-6 max-lg:flex max-lg:flex-col max-lg:justify-center border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12">
-          <h2 class="text-xl leading-8 font-medium text-white uppercase mb-5 max-lg:text-center sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Level 1 - SSI Freediving</h2>
-          <div class="flex items-center gap-x-11 mb-12 lg:mb-16 max-lg:justify-center">
-            <div class="flex items-center w-fit flex-wrap border border-white border-opacity-10">
-              <div class="flex items-center justify-center text-xl text-white even:border-l even:border-l-white even:border-opacity-10 py-4 px-6 lg:text-3xl lg:py-6 lg:px-9">72 hr</div>
-              <div class="flex items-center justify-center text-xl text-white even:border-l even:border-l-white even:border-opacity-10 py-4 px-6 lg:text-3xl lg:py-6 lg:px-9">$ 7 800</div>
+        <div class="w-full pt-8 pb-12 px-6 max-lg:flex max-lg:flex-col max-lg:justify-center border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-14">
+          <div class="course-infoitems flex w-full flex-wrap gap-y-12">
+            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
+              <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 max-lg:text-center sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Our Level 2 course offers:</h3>
+              <div class="grid gap-y-6 text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8">
+                <p>For ***$/person, you will receive:</p>
+                <ul class="list-disc text-xl lg:text-xl">
+                  <li>*(количество занятий)* advanced theory lessons</li>
+                  <li>*(количество занятий)* apnea sessions (static and dynamic)</li>
+                  <li>*(количество занятий)* open water sessions</li>
+                  <li>Interactive e-learning materials</li>
+                  <li>Molchanovs Level 2 Freediver e-certificate (upon completion of the course)</li>
+                  <li>Equipment rental for pool and open water sessions</li>
+                </ul>
+              </div>
             </div>
-            <a href="#" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 bg-card max-lg:backdrop-blur-lg lg:text-main lg:border-opacity-50 lg:bg-lightGrey lg:text-xl lg:leading-6 hover:bg-accent hover:border-accent max-lg:hidden">Book now<i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
+              <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Important Information:</h3>
+              <div class="grid gap-y-6 text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8">
+                <p>All course fees include the student manual, pool and transportation fees, and all necessary equipment. We also offer accommodation options at an additional cost of ***$/night for a standard room. Our instructors are not only certified but also have extensive experience in advanced freediving.</p>
+              </div>
+              <div class="flex items-center flex-wrap gap-y-6 gap-x-11 mt-10 lg:mt-14 max-lg:justify-center">
+                <div class="flex items-center w-fit flex-wrap border border-white border-opacity-50 backdrop-blur-3xl bg-card">
+                  <div class="flex items-center justify-center text-xl text-white even:border-l even:border-l-white even:border-opacity-50 py-4 px-6 lg:text-3xl lg:py-6 lg:px-9">72 hr</div>
+                  <div class="flex items-center justify-center text-xl text-white even:border-l even:border-l-white even:border-opacity-50 py-4 px-6 lg:text-3xl lg:py-6 lg:px-9">$ 7 800</div>
+                </div>
+                <a href="#" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 bg-card max-lg:backdrop-blur-lg lg:text-main lg:border-opacity-50 lg:bg-lightGrey lg:text-xl lg:leading-6 hover:bg-accent hover:border-accent max-lg:hidden">Book now<i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+              </div>
+            </div>
+            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
+              <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Requirements</h3>
+              <div class="grid gap-y-6 text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8">
+                <p>Please note that freediving is not recommended for individuals with:</p>
+                <ul class="list-disc text-xl lg:text-xl">
+                  <li>Heart conditions</li>
+                  <li>Eardrum disorders</li>
+                  <li>Vascular diseases</li>
+                  <li>Mental health conditions</li>
+                  <li>Pregnant women</li>
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <div class="flex w-full flex-wrap gap-y-12">
-            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-10 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2 lg:text-xl">
-              <h4 class="mb-2">PRICE:</h4>
-              <ul class="list-disc text-xl lg:text-xl">
-                <li>Only course: 2 or more students: 265 euro/per person, including ALL fees (digital student manual, digital certification,
-                pool and transportation fees and all necessary equipment). If you are alone in the course we will charge you a
-                supplement of 20 euro. If you require a one on one tuition while there is already a level 1 course running, we will add
-                40 euro to the base price.</li>
-                <li>Accommodation: Want a place to stay? We have rooms in our apartments, at 30 euro/night (plus 25 euro cleaning fee at the end of your stay)</li>
-                <li>Insurance: If you want to have an insurance covering your freediving activities and don’t have your own, do not worry!
-                We offer insurance at only 14 euro / week. In this case it is best that you let us know before starting your courses.</li>
-              </ul>
-            </div>
-            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-10 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2 lg:text-xl">
-              <h4 class="mb-2">COURSE CONTENT:</h4>
-              <ul class="list-disc text-xl lg:text-xl">
-                <li>2 theory sessions</li>
-                <li>1 dynamic apnea session</li>
-                <li>1 static apnea session</li>
-                <li>2 open water sessions</li>
-              </ul>
-            </div>
-          </div>
-          <a href="#" class="inline-flex items-center justify-center mx-auto mt-14 gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 bg-card max-lg:backdrop-blur-lg lg:text-main lg:border-opacity-50 lg:bg-lightGrey lg:text-xl lg:leading-6 hover:bg-accent hover:border-accent lg:hidden">Book now<i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
         </div>
       </div>
     </section>

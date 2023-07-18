@@ -1128,6 +1128,10 @@ body {
   row-gap: 1.25rem;
 }
 
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
 .gap-y-7 {
   row-gap: 1.75rem;
 }
@@ -1203,6 +1207,10 @@ body {
 
 .border-opacity-20 {
   --tw-border-opacity: 0.2;
+}
+
+.border-opacity-50 {
+  --tw-border-opacity: 0.5;
 }
 
 .bg-card {
@@ -1549,6 +1557,12 @@ body {
 
 .backdrop-blur-lg {
   --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-3xl {
+  --tw-backdrop-blur: blur(64px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -1921,6 +1935,12 @@ body {
   z-index: -1;
 }
 
+.course-infoitems>div:nth-child(1),
+.course-infoitems>div:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+  padding-bottom: 60px;
+}
+
 @media screen and (max-width: 1023.98px) {
   .single-courses main {
     background-size: 200% auto;
@@ -2192,6 +2212,10 @@ body {
 
 .even\:border-opacity-10:nth-child(even) {
   --tw-border-opacity: 0.1;
+}
+
+.even\:border-opacity-50:nth-child(even) {
+  --tw-border-opacity: 0.5;
 }
 
 .hover\:border-accent:hover {
@@ -2891,6 +2915,10 @@ body {
     padding: 3rem;
   }
 
+  .lg\:p-14 {
+    padding: 3.5rem;
+  }
+
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -3140,6 +3168,10 @@ body {
 
   .xl\:even\:border-opacity-10:nth-child(even) {
     --tw-border-opacity: 0.1;
+  }
+
+  .xl\:even\:border-opacity-50:nth-child(even) {
+    --tw-border-opacity: 0.5;
   }
 
   .xl\:even\:pl-14:nth-child(even) {
