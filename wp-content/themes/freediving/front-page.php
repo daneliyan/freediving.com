@@ -104,7 +104,7 @@ get_header(); ?>
                     <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden"><?php the_time('d.m.Y'); ?></div>
                     <a href="<?php the_permalink(); ?>" class="card-content z-10">
                       <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11"><?php the_field('trip_title'); ?></h3>
-                      <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7"><?php the_field('trip_text'); ?></div>
+                      <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7"><?php the_field('trip_descr'); ?></div>
                     </a>
                     <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
                       <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60"><?php the_time('d.m.Y'); ?></div>

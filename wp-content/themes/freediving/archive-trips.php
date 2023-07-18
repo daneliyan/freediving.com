@@ -10,16 +10,16 @@ get_header(); ?>
         <div class="content max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
           <h1 class="text-white uppercase font-medium max-w-6xl text-3xl leading-9 mb-7 max-lg:mb-60 max-lg:text-center md:text-6xl md:leading-[66px] lg:mb-10 2xl:text-8xl 2xl:leading-[100px]"><?php the_field('trips_title'); ?></h1>
           <div class="max-lg:text-center text-lg leading-6 text-white max-w-2xl max-lg:order-2 lg:text-xl lg:leading-8 lg:mb-16"><?php the_field('trips_text'); ?></div>
-          <div class="flex gap-x-10 max-lg:order-1 max-lg:mb-7">
-            <?php $booknow_link = get_field('booknow_link', 'option');
-            if( $booknow_link ): 
-                $booknow_link_url = $booknow_link['url'];
-                $booknow_link_title = $booknow_link['title'];
-                $booknow_link_target = $booknow_link['target'] ? $booknow_link['target'] : '_self';
-                ?>
-                <a href="<?php echo esc_url( $booknow_link_url ); ?>" target="<?php echo esc_attr( $booknow_link_target ); ?>" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card lg:text-xl lg:leading-6 hover:shadow-myShadow1"><?php echo esc_html( $booknow_link_title ); ?><i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-            <?php endif; ?>
-          </div>
+          <?php $trips_booknow_link = get_field('trips_booknow_link');
+          if( $trips_booknow_link ): 
+              $trips_booknow_link_url = $trips_booknow_link['url'];
+              $trips_booknow_link_title = $trips_booknow_link['title'];
+              $trips_booknow_link_target = $trips_booknow_link['target'] ? $trips_booknow_link['target'] : '_self';
+              ?>
+            <div class="flex gap-x-10 max-lg:order-1 max-lg:mb-7">
+              <a href="<?php echo esc_url( $trips_booknow_link_url ); ?>" target="<?php echo esc_attr( $trips_booknow_link_target ); ?>" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 backdrop-blur-lg bg-card lg:text-xl lg:leading-6 hover:shadow-myShadow1"><?php echo esc_html( $trips_booknow_link_title ); ?><i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </section>
@@ -33,14 +33,14 @@ get_header(); ?>
         <div class="grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
           <?php    
           global $post;
-          $news_query = new WP_Query( [
+          $trips_query = new WP_Query( [
             'posts_per_page' => -1,
             'post_type' => 'trips',
             'order'        => 'ASC',
           ] );
-          if ( $news_query->have_posts() ) {
-            while ( $news_query->have_posts() ) {
-              $news_query->the_post();
+          if ( $trips_query->have_posts() ) {
+            while ( $trips_query->have_posts() ) {
+              $trips_query->the_post();
               ?>
                 <div class="card-wrapper">
                   <div class="z-0 card flex flex-col justify-between relative w-full py-7 px-9 bg-no-repeat bg-cover bg-center min-h-[540px] lg:justify-end lg:p-12 lg:min-h-[660px] 3xl:min-h-[740px]" style="background-image: url(<?php the_field('trip_card_img'); ?>);">
@@ -48,7 +48,7 @@ get_header(); ?>
                     <div class="flex items-center justify-center w-full text-center text-lg font-normal text-white lg:hidden"><?php the_time('d.m.Y'); ?></div>
                     <a href="<?php the_permalink(); ?>" class="card-content z-10">
                       <h3 class="max-lg:text-center text-xl text-white font-medium max-sm:text-center mb-5 lg:mb-11"><?php the_field('trip_title'); ?></h3>
-                      <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7"><?php the_field('trip_text'); ?></div>
+                      <div class="max-lg:text-center text-lg leading-6 text-white text-opacity-80 lg:mb-9 lg:text-xl lg:leading-7"><?php the_field('trip_descr'); ?></div>
                     </a>
                     <div class="flex items-center justify-between w-full max-lg:justify-center max-lg:hidden">
                       <div class="max-lg:text-center text-lg font-normal text-white lg:text-opacity-60"><?php the_time('d.m.Y'); ?></div>
@@ -83,7 +83,7 @@ get_header(); ?>
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="relative flex flex-col justify-between flex-wrap gap-y-10 max-lg:items-center lg:flex-row">
           <div class="w-full xl:w-6/12">
-            <h2 class="text-3xl leading-8 font-medium text-white uppercase mb-12 max-lg:text-center sm:text-5xl sm:leading-[1.1] lg:text-6xl lg:leading-[1.1]"><?php the_field('cta_title', 'option') ?></h2>
+            <h2 class="text-3xl leading-8 font-medium text-white uppercase mb-12 max-lg:text-center sm:text-5xl sm:leading-[1.1] lg:text-6xl lg:leading-[1.1]"><?php the_field('trips_cta_title') ?></h2>
             <div class="group flex items-center flex-col gap-y-5 text-white lg:items-start lg:gap-y-9">
               <div class="text-lg leading-5 max-lg:font-semibold lg:text-3xl"><?php the_field('cta_subtitle', 'option'); ?></div>
               <p class="max-lg:text-center text-lg leading-5 lg:text-xl lg:leading-6"><?php the_field('address', 'option'); ?></p>

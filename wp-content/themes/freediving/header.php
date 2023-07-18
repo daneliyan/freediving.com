@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru" class="h-full scroll-smooth antialiased overflow-x-hidden">
+<html <?php language_attributes(); ?> class="h-full scroll-smooth antialiased overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> style="background-image: url(<?php if (is_page('contacts')) : ?><?php the_field('background_image_contacts');?>
-  <?php elseif (is_page('course')) : ?><?php the_field('background_image_course');?><?php endif; ?>);">
+<body <?php body_class(); ?> style="background-image: url(<?php if (is_page('contacts')) : ?><?php the_field('background_image_contacts');?><?php endif; ?>);">
 
   <header class="header z-10 absolute top-0 left-0 right-0">
     <div class="mx-auto container px-3 sm:px-6 lg:px-16">
@@ -79,4 +78,4 @@
     </div>
   </header>
 
-  <main>
+  <main style="background-image: url(<?php if (is_singular('courses')) : ?><?php the_field('course_bg');?><?php endif; ?>);">
