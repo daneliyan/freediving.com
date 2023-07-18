@@ -67,6 +67,8 @@
       </div>
     </section>
 
+    <!-- Готово -->
+    <?php if(have_rows('course_slider')) : ?>
     <section class="course-gallery bg-main relative z-10 pb-32">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">
         <div class="swiper-nav relative flex items-center justify-center mb-5 lg:ml-auto lg:w-fit">
@@ -77,15 +79,19 @@
         <!-- Swiper -->
         <div class="swiper courseGallerySwiper w-full h-[750px] z-[0]">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/hero-slider-img.jpg" alt=""></div>
+            <?php while(have_rows('course_slider')) : the_row(); ?>
+            <?php $img = get_sub_field('img'); ?>
+              <div class="swiper-slide">
+                <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+              </div>
+            <?php endwhile; ?>
           </div>
           <div class="second-button-prev swiper-button-prev z-50 relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:shadow-myShadow1 lg:w-[74px] lg:h-[74px] lg:border-white lg:border lg:border-opacity-20 lg:rounded-full lg:backdrop-blur-lg lg:bg-card lg:text-white lg:absolute lg:left-7 lg:top-2/4 lg:-mt-10 max-lg:hidden"></div>
           <div class="second-button-next swiper-button-next z-50 relative left-auto right-auto top-auto w-6 h-6 text-[#3B4855] mt-0 hover:shadow-myShadow1 lg:w-[74px] lg:h-[74px] lg:border-white lg:border lg:border-opacity-20 lg:rounded-full lg:backdrop-blur-lg lg:bg-card lg:text-white lg:absolute lg:right-7 lg:top-2/4 lg:-mt-10 max-lg:hidden"></div>
         </div>
       </div>
     </section>
+    <?php else : endif; ?>
 
     <section class="ba z-0 relative pb-24 bg-main xl:pb-36">
       <div class="mx-auto container px-3 sm:px-6 lg:px-16">

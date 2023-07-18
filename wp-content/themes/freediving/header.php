@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> style="background-image: url(<?php if (is_page('contacts')) : ?><?php the_field('background_image_contacts');?><?php endif; ?>);">
+<body <?php body_class(); ?> <?php if (is_page('contacts')) : ?>style="background-image: url(<?php the_field('background_image_contacts');?>);"<?php endif; ?>>
 
   <header class="header z-10 absolute top-0 left-0 right-0">
     <div class="mx-auto container px-3 sm:px-6 lg:px-16">
@@ -78,4 +78,4 @@
     </div>
   </header>
 
-  <main style="background-image: url(<?php if (is_singular('courses')) : ?><?php the_field('course_bg');?><?php endif; ?>);">
+  <main <?php if (is_singular('courses')) : ?>style="background-image: url(<?php the_field('course_bg');?>);"<?php endif; ?>>
