@@ -27,72 +27,17 @@
       </div>
     </section>
 
-    
-    <!-- <section class="coursebl overflow-hidden relative z-0 pt-0 mb-32">
-      <div class="mx-auto relative container px-3 sm:px-6 lg:px-16">
-        <div class="w-full pt-8 pb-12 px-6 max-lg:flex max-lg:flex-col max-lg:justify-center border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-14">
-          <div class="course-infoitems flex w-full flex-wrap gap-y-12">
-            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
-              <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 max-lg:text-center sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Our Level 2 course offers:</h3>
-              <div class="grid gap-y-6 text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8">
-                <p>For ***$/person, you will receive:</p>
-                <ul class="list-disc text-xl lg:text-xl">
-                  <li>*(количество занятий)* advanced theory lessons</li>
-                  <li>*(количество занятий)* apnea sessions (static and dynamic)</li>
-                  <li>*(количество занятий)* open water sessions</li>
-                  <li>Interactive e-learning materials</li>
-                  <li>Molchanovs Level 2 Freediver e-certificate (upon completion of the course)</li>
-                  <li>Equipment rental for pool and open water sessions</li>
-                </ul>
-              </div>
-            </div>
-            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
-              <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Important Information:</h3>
-              <div class="grid gap-y-6 text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8">
-                <p>All course fees include the student manual, pool and transportation fees, and all necessary equipment. We also offer accommodation options at an additional cost of ***$/night for a standard room. Our instructors are not only certified but also have extensive experience in advanced freediving.</p>
-              </div>
-              <div class="flex items-center flex-wrap gap-y-6 gap-x-11 mt-10 lg:mt-14 max-lg:justify-center">
-                <div class="flex items-center w-fit flex-wrap border border-white border-opacity-50 backdrop-blur-3xl bg-card">
-                  <div class="flex items-center justify-center text-xl text-white even:border-l even:border-l-white even:border-opacity-50 py-4 px-6 lg:text-3xl lg:py-6 lg:px-9">72 hr</div>
-                  <div class="flex items-center justify-center text-xl text-white even:border-l even:border-l-white even:border-opacity-50 py-4 px-6 lg:text-3xl lg:py-6 lg:px-9">$ 7 800</div>
-                </div>
-                <a href="#" class="inline-flex items-center justify-center gap-x-6 py-6 px-8 text-lg leading-5 font-medium text-white rounded-full border-white border border-opacity-20 bg-card max-lg:backdrop-blur-lg lg:text-main lg:border-opacity-50 lg:bg-lightGrey lg:text-xl lg:leading-6 hover:bg-accent hover:border-accent max-lg:hidden">Book now<i class="icomoon icon-whatsapp text-2xl leading-none font-normal"></i></a>
-              </div>
-            </div>
-            <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
-              <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]">Requirements</h3>
-              <div class="grid gap-y-6 text-lg leading-6 text-white max-w-2xl lg:text-xl lg:leading-8">
-                <p>Please note that freediving is not recommended for individuals with:</p>
-                <ul class="list-disc text-xl lg:text-xl">
-                  <li>Heart conditions</li>
-                  <li>Eardrum disorders</li>
-                  <li>Vascular diseases</li>
-                  <li>Mental health conditions</li>
-                  <li>Pregnant women</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
+    <!-- Почти Готово -->
     <?php if( have_rows('course_grid') ): ?>
-
     <section class="coursebl relative z-0 pt-0 mb-32">
       <div class="mx-auto relative container px-3 sm:px-6 lg:px-16">
         <div class="w-full pt-8 pb-12 px-6 max-lg:flex max-lg:flex-col max-lg:justify-center border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-14">
           <div class="course-infoitems flex w-full flex-wrap gap-y-12">
-
-      <?php while( have_rows('course_grid') ): the_row(); 
-
-        // переменные
-        $title = get_sub_field('title');
-        $content = get_sub_field('content');
-        $nav = get_sub_field('course_nav');
-
-        ?>
-
+          <?php while( have_rows('course_grid') ): the_row(); 
+            $title = get_sub_field('title');
+            $content = get_sub_field('content');
+            $nav = get_sub_field('course_nav');
+            ?>
             <div class="w-full text-xl text-white xl:even:border-l xl:even:border-l-white xl:even:border-opacity-50 xl:odd:pr-14 xl:even:pl-14 xl:w-1/2">
               <?php if( $title ): ?>
                 <h3 class="text-xl leading-8 font-medium text-white uppercase mb-5 sm:text-3xl sm:leading-[1.1] lg:mb-10 lg:text-5xl lg:leading-[1.1]"><?php echo $title; ?></h3>
@@ -117,14 +62,33 @@
                 </div>
               <?php endif; ?>
             </div>
-
-      <?php endwhile; ?>
-
+          <?php endwhile; ?>
           </div>
         </div>
       </div>
     </section>
+    <?php endif; ?>
 
+    <!-- Готово -->
+    <?php if( have_rows('course_faq') ): ?>
+    <section class="mb-32">
+      <div class="mx-auto container px-3 sm:px-6 lg:px-16">
+        <div class="grid gap-y-5 w-full">
+        <?php while( have_rows('course_faq') ): the_row(); ?>
+          <div  class="accordion grid w-full">
+            <h3>
+              <button type="button" class="flex items-center justify-between w-full p-7 text-lg font-medium text-white border-white border border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl hover:shadow-myShadow1"><span class="text-left"><?php the_sub_field('question'); ?></span>
+                <i class="icomoon icon-chevron w-5 h-5 text-lg text-white shrink-0 ml-3 lg:mr-5"></i>
+              </button>
+            </h3>
+            <div class="accordion-content">
+              <div class="p-7 w-full text-lg font-normal text-white text-opacity-80 border-white border border-t-0 border-opacity-20 backdrop-blur-lg bg-card lg:p-12 lg:text-xl"><?php the_sub_field('answer'); ?></div>
+            </div>
+          </div>
+        <?php endwhile; ?>
+        </div>
+      </div>
+    </section>
     <?php endif; ?>
 
     <!-- Готово -->
